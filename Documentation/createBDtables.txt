@@ -1,0 +1,23 @@
+CREATE TABLE Statistic(
+  id SERIAL PRIMARY KEY,
+  user_id INT,
+  book_id INT,
+  readed_pages INT,
+  review TEXT,
+  FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
+  FOREIGN KEY (book_id) REFERENCES books (id) ON DELETE CASCADE
+);
+
+CREATE TABLE Books(
+  id SERIAL PRIMARY KEY,
+  author TEXT,
+  name TEXT NOT NULL,
+  pages INT NOT NULL,
+  CHECK(pages>=0)
+);
+
+CREATE TABLE Users(
+  id serial PRIMARY KEY,
+  email TEXT NOT NULL UNIQUE,
+  password TEXT NOT NULL
+);
