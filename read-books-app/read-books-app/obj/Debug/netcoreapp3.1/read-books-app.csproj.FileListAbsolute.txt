@@ -1,0 +1,13 @@
+C:\Users\SINED\source\repos\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.exe
+C:\Users\SINED\source\repos\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.deps.json
+C:\Users\SINED\source\repos\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.runtimeconfig.json
+C:\Users\SINED\source\repos\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.runtimeconfig.dev.json
+C:\Users\SINED\source\repos\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.dll
+C:\Users\SINED\source\repos\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.pdb
+C:\Users\SINED\source\repos\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.csprojAssemblyReference.cache
+C:\Users\SINED\source\repos\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.AssemblyInfoInputs.cache
+C:\Users\SINED\source\repos\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.AssemblyInfo.cs
+C:\Users\SINED\source\repos\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.dll
+C:\Users\SINED\source\repos\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.pdb
+C:\Users\SINED\source\repos\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Users\SINED\source\repos\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.csproj.CopyComplete
