@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "yU/2+Ns3QxLHfrCSQOS3YFZhheQlg5ExfKIMydF5Jjp3NI8356ae7NBDSplUqtKTXAhbyxvl4Y/Qqt6k0Wu5Og==",
+  "success": true,
+  "projectFilePath": "D:\\универ\\3 курс\\програмна інженерія\\проект\\read-books\\read-books-app\\read-books-app\\read-books-app.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sypko\\.nuget\\packages\\npgsql\\4.1.5\\npgsql.4.1.5.nupkg.sha512",
+    "C:\\Users\\sypko\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

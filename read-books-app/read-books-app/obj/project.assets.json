@@ -78,19 +78,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SINED\\.nuget\\packages\\": {}
+    "C:\\Users\\sypko\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SINED\\source\\repos\\read-books-app\\read-books-app\\read-books-app.csproj",
+      "projectUniqueName": "D:\\универ\\3 курс\\програмна інженерія\\проект\\read-books\\read-books-app\\read-books-app\\read-books-app.csproj",
       "projectName": "read-books-app",
-      "projectPath": "C:\\Users\\SINED\\source\\repos\\read-books-app\\read-books-app\\read-books-app.csproj",
-      "packagesPath": "C:\\Users\\SINED\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SINED\\source\\repos\\read-books-app\\read-books-app\\obj\\",
+      "projectPath": "D:\\универ\\3 курс\\програмна інженерія\\проект\\read-books\\read-books-app\\read-books-app\\read-books-app.csproj",
+      "packagesPath": "C:\\Users\\sypko\\.nuget\\packages\\",
+      "outputPath": "D:\\универ\\3 курс\\програмна інженерія\\проект\\read-books\\read-books-app\\read-books-app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SINED\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sypko\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -134,7 +134,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

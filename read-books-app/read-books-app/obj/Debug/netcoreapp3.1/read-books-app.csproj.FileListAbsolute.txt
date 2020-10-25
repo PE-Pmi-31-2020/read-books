@@ -11,3 +11,18 @@ C:\Users\SINED\source\repos\read-books-app\read-books-app\obj\Debug\netcoreapp3.
 C:\Users\SINED\source\repos\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.pdb
 C:\Users\SINED\source\repos\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\Npgsql.dll
 C:\Users\SINED\source\repos\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.csproj.CopyComplete
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.exe
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.deps.json
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.runtimeconfig.json
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.runtimeconfig.dev.json
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.dll
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\read-books-app.pdb
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\bin\Debug\netcoreapp3.1\Npgsql.dll
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.csprojAssemblyReference.cache
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.AssemblyInfoInputs.cache
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.AssemblyInfo.cs
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.csproj.CoreCompileInputs.cache
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.csproj.CopyComplete
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.dll
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.pdb
+D:\универ\3 курс\програмна інженерія\проект\read-books\read-books-app\read-books-app\obj\Debug\netcoreapp3.1\read-books-app.genruntimeconfig.cache
