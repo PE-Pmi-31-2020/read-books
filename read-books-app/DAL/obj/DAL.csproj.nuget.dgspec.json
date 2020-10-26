@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\read-books\\read-books-app\\read-books-app\\read-books-app.csproj": {}
+    "D:\\C#\\read-books\\read-books-app\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "D:\\C#\\read-books\\read-books-app\\read-books-app\\read-books-app.csproj": {
+    "D:\\C#\\read-books\\read-books-app\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\read-books\\read-books-app\\read-books-app\\read-books-app.csproj",
-        "projectName": "read-books-app",
-        "projectPath": "D:\\C#\\read-books\\read-books-app\\read-books-app\\read-books-app.csproj",
+        "projectUniqueName": "D:\\C#\\read-books\\read-books-app\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "D:\\C#\\read-books\\read-books-app\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\Erik\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\read-books\\read-books-app\\read-books-app\\obj\\",
+        "outputPath": "D:\\C#\\read-books\\read-books-app\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

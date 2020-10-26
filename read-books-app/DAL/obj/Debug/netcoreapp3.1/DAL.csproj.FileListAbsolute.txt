@@ -1,0 +1,5 @@
+D:\C#\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+D:\C#\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+D:\C#\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+D:\C#\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+D:\C#\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
