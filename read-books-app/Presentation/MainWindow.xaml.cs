@@ -67,8 +67,8 @@ namespace Presentation
 
         private void SettingButton_Click(object sender, RoutedEventArgs e)
         {
-            SettingsWindow taskWindow = new SettingsWindow();
-            taskWindow.Show();
+            SettingsWindow settingWindow = new SettingsWindow();
+            settingWindow.Show();
         }
        
     }
