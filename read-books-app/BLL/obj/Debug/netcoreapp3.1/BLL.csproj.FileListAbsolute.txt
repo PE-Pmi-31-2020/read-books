@@ -9,3 +9,15 @@ D:\C#\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
 D:\C#\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
 D:\C#\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.dll
 D:\C#\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\DAL.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.csprojAssemblyReference.cache
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.pdb

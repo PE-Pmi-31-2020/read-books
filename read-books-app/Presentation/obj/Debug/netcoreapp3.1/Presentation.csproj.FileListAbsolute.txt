@@ -40,3 +40,47 @@ D:\C#\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentatio
 D:\C#\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.csproj.CopyComplete
 D:\C#\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.dll
 D:\C#\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.pdb
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Presentation.exe
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Presentation.deps.json
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Presentation.runtimeconfig.json
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Presentation.runtimeconfig.dev.json
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Presentation.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Presentation.pdb
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Npgsql.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\BLL.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\DAL.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\BLL.pdb
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.csprojAssemblyReference.cache
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\App.g.cs
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation_MarkupCompile.cache
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation_MarkupCompile.lref
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.g.resources
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.AssemblyInfoInputs.cache
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.AssemblyInfo.cs
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.csproj.CoreCompileInputs.cache
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.csproj.CopyComplete
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.pdb
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\Presentation.genruntimeconfig.cache

@@ -7,3 +7,15 @@ D:\C#\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.de
 D:\C#\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
 D:\C#\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.dll
 D:\C#\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.json
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.dev.json
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache
