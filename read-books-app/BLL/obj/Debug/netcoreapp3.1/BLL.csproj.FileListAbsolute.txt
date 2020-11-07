@@ -1,0 +1,11 @@
+D:\C#\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+D:\C#\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+D:\C#\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+D:\C#\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\DAL.dll
+D:\C#\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\C#\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.csprojAssemblyReference.cache
+D:\C#\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+D:\C#\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+D:\C#\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
+D:\C#\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+D:\C#\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
