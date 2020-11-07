@@ -19,3 +19,15 @@ D:\универ\3 курс\програмна інженерія\ProjectBook\rea
 D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.dll
 D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
 D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.json
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.dev.json
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache

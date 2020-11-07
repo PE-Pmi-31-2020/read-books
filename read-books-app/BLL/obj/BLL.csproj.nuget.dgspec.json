@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\BLL\\BLL.csproj": {}
+    "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\BLL\\BLL.csproj": {}
   },
   "projects": {
-    "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\BLL\\BLL.csproj": {
+    "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\sypko\\.nuget\\packages\\",
-        "outputPath": "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\BLL\\obj\\",
+        "projectPath": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\vikan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sypko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vikan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\DAL\\DAL.csproj"
+              "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\DAL\\DAL.csproj"
               }
             }
           }
@@ -56,21 +56,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\DAL\\DAL.csproj": {
+    "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\sypko\\.nuget\\packages\\",
-        "outputPath": "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\vikan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sypko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vikan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -124,7 +124,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -21,3 +21,15 @@ D:\универ\3 курс\програмна інженерія\ProjectBook\rea
 D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
 D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.dll
 D:\универ\3 курс\програмна інженерія\ProjectBook\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.csprojAssemblyReference.cache
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\BLL\obj\Debug\netcoreapp3.1\BLL.pdb

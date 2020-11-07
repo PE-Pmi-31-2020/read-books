@@ -794,19 +794,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sypko\\.nuget\\packages\\": {}
+    "C:\\Users\\vikan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\Presentation\\Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\Presentation\\Presentation.csproj",
       "projectName": "Presentation",
-      "projectPath": "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\Presentation\\Presentation.csproj",
-      "packagesPath": "C:\\Users\\sypko\\.nuget\\packages\\",
-      "outputPath": "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\Presentation\\obj\\",
+      "projectPath": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\Presentation\\Presentation.csproj",
+      "packagesPath": "C:\\Users\\vikan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sypko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vikan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -819,8 +819,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\BLL\\BLL.csproj": {
-              "projectPath": "D:\\универ\\3 курс\\програмна інженерія\\ProjectBook\\read-books\\read-books-app\\BLL\\BLL.csproj"
+            "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\BLL\\BLL.csproj"
             }
           }
         }
@@ -851,7 +851,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

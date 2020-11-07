@@ -64,5 +64,12 @@ namespace Presentation
             AddBookButton.Visibility = Visibility.Visible;
             AddBookLabel.Visibility = Visibility.Visible;
         }
+
+        private void SettingButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsWindow taskWindow = new SettingsWindow();
+            taskWindow.Show();
+        }
+       
     }
 }
