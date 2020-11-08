@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\DAL\\DAL.csproj": {}
+    "C:\\Users\\SINED\\Desktop\\RB\\read-books\\read-books-app\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\DAL\\DAL.csproj": {
+    "C:\\Users\\SINED\\Desktop\\RB\\read-books\\read-books-app\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\SINED\\Desktop\\RB\\read-books\\read-books-app\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\vikan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vikan\\OneDrive\\Документи\\GitHub\\read-books\\read-books-app\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\SINED\\Desktop\\RB\\read-books\\read-books-app\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\SINED\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SINED\\Desktop\\RB\\read-books\\read-books-app\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vikan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SINED\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

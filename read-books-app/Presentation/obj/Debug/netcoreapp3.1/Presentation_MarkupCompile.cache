@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\
+C:\Users\SINED\Desktop\RB\read-books\read-books-app\Presentation\obj\Debug\netcoreapp3.1\
 Presentation
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\vikan\OneDrive\Документи\GitHub\read-books\read-books-app\Presentation\App.xaml
-2-649523810
+C:\Users\SINED\Desktop\RB\read-books\read-books-app\Presentation\App.xaml
+4104329900
 
-4-1545187580
-2121232223516
-MainWindow.xaml;SettingsWindow.xaml;
+6-694027052
+2121669974531
+LoginWindow.xaml;MainWindow.xaml;RegisterWindow.xaml;SettingsWindow.xaml;
 
 False
 
