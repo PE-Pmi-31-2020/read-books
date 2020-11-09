@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -23,6 +24,30 @@ namespace Presentation
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            IntPtr windowHandle = new WindowInteropHelper(this).Handle;
+            HwndSource hwndSource = HwndSource.FromHwnd(windowHandle);
+            hwndSource.AddHook(new HwndSourceHook(WndProc));
+        }
+
+        private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
+        {
+            if((msg == 0xa4))
+            {
+                ShowContextMenu();
+                handled = true;
+            }
+            return IntPtr.Zero;
+        }
+
+        private void ShowContextMenu()
+        {
+            var contextMenu = Resources["contextMenu"] as ContextMenu;
+            contextMenu.IsOpen = true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -70,6 +95,20 @@ namespace Presentation
             SettingsWindow settingWindow = new SettingsWindow();
             settingWindow.Show();
         }
+
+        private void ContextMenu_Click(object sender, RoutedEventArgs e)
+        {
+            var item = e.OriginalSource as MenuItem;
+            MessageBox.Show($"{item.Header} was clicked");
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Show();
+            this.Close();
+        }
        
+
     }
 }
