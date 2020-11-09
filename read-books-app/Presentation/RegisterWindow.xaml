@@ -7,8 +7,129 @@
         mc:Ignorable="d"
         Title="Register" Height="450" Width="500"
         AllowsTransparency="True" Background="Transparent"
-        WindowStyle="None" ResizeMode="NoResize">
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown">
     <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            
+            
+            <Border Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#F8F9F9" Offset="0.0"/>
+                        <GradientStop Color="#515A5A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Read book app"
+                           FontWeight="Normal"
+                           FontFamily="Century Gothic"
+                           FontSize="30"
+                           HorizontalAlignment="Center"/>
+                
+                <TextBlock Text="SIGN UP"
+                           FontWeight="Normal"
+                           FontFamily="Century Gothic"
+                           FontSize="30"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBox FontFamily="Century Gothic"
+                         FontWeight="ExtraLight"
+                         Text="Email"
+                         FontSize="22"
+                         HorizontalAlignment="Center"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="225"
+                         Height="25"
+                         HorizontalContentAlignment="Left"
+                         Margin="122,0,0,0"
+                         
+                    />
+                </StackPanel>
+                <Border
+                    Width="250"
+                    Height="1"
+                    Background="Black"
+                    />
+
+                <StackPanel Orientation="Horizontal">
+                    <PasswordBox 
+                         FontFamily="Century Gothic"
+                         FontWeight="ExtraLight"
+                         Password="Password"
+                         FontSize="22"
+                         HorizontalAlignment="Center"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="225"
+                         Height="25"
+                         Margin="122,10,0,0"
+                         
+                    />
+                </StackPanel>
+                <Border
+                    Width="250"
+                    Height="1"
+                    Background="Black"
+                    />
+
+                <StackPanel Orientation="Horizontal">
+                    <PasswordBox 
+                         FontFamily="Century Gothic"
+                         FontWeight="ExtraLight"
+                         Password="Password"
+                         FontSize="22"
+                         HorizontalAlignment="Center"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="225"
+                         Height="25"
+                         Margin="122,10,0,0"
+                         
+                    />
+                </StackPanel>
+                <Border
+                    Width="250"
+                    Height="1"
+                    Background="Black"
+                    />
+
+
+                <Button Content="SIGN UP" Width="90" Height="30" Margin="0,50,0,0" FontWeight="Bold" Click="Button_Click_1" >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#D0D3D4"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+        </Grid>
         
     </Grid>
 </Window>

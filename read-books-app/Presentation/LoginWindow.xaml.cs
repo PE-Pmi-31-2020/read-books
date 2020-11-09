@@ -32,6 +32,9 @@ namespace Presentation
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            RegisterWindow regWindow = new RegisterWindow();
+            regWindow.Show();
+            this.Close();
 
         }
 
