@@ -1,0 +1,54 @@
+﻿<Window x:Class="Presentation.AddBookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation"
+        mc:Ignorable="d"
+        Title="AddBookWindow" Height="1200" Width="800">
+    <Window.Resources>
+        <ContextMenu x:Key="contextMenu" MenuItem.Checked="ContextMenu_Click">
+            <MenuItem Header="Налаштування" Click="SettingButton_Click">
+
+            </MenuItem>
+            <MenuItem Header="Шрифт" IsCheckable="True">
+                <Menu>
+                    <MenuItem Header="Bold" IsCheckable="True">
+                    </MenuItem>
+                    <MenuItem Header="Italic" IsCheckable="True">
+                    </MenuItem>
+                </Menu>
+            </MenuItem>
+            <MenuItem x:Name="ExitButton"  Header="Вихід" Click="ExitButton_Click">
+
+            </MenuItem>
+        </ContextMenu>
+    </Window.Resources>
+    <Grid>
+        <Label Content="Книжки, які планую прочитати" HorizontalAlignment="Left" Margin="30,38,0,0" VerticalAlignment="Top" Width="224"/>
+        <Label Content="Книжки, які прочитав" HorizontalAlignment="Left" Margin="533,38,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="30,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="634" IsReadOnly="True"/>
+        <TextBox HorizontalAlignment="Left" Margin="533,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="634" IsReadOnly="True"/>
+        <Label Content="Графік прочитаних сторінок" HorizontalAlignment="Center" Margin="0,755,0,0" VerticalAlignment="Top"/>
+        <Canvas Margin="85,798,85,67"/>
+        <Label Content="Назва" HorizontalAlignment="Left" Margin="294,86,0,0" VerticalAlignment="Top" />
+        <TextBox HorizontalAlignment="Left" Margin="294,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" />
+        <Label x:Name="AuthorLabel" Content="Автор" HorizontalAlignment="Left" Margin="294,176,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="AuthorTextBox" HorizontalAlignment="Left" Margin="294,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" />
+        <Label x:Name="NameLabel" Content="Назва" HorizontalAlignment="Left" Margin="294,86,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="294,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" />
+        <Label x:Name="ReviewLabel" Content="Короткі враження" HorizontalAlignment="Left" Margin="294,283,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="ReviewTextBox" HorizontalAlignment="Left" Margin="294,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="103" Cursor="" />
+        <Label x:Name="ReadLabel" Content="Прочитані" HorizontalAlignment="Left" Margin="294,500,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="ReadTextBox" HorizontalAlignment="Left" Margin="294,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="29" />
+        <Label x:Name="PagesLabel" Content="Кількість сторінок" HorizontalAlignment="Left" Margin="294,469,0,0" VerticalAlignment="Top" />
+        <Label x:Name="AllLabel" Content="Всього" HorizontalAlignment="Left" Margin="416,500,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="AllTextBox" HorizontalAlignment="Left" Margin="416,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="29" />
+        <Button x:Name="SaveButton" Content="Зберегти" HorizontalAlignment="Left" Margin="294,606,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" />
+        <Button x:Name="DeleteButton" Content="Видалити" HorizontalAlignment="Left" Margin="400,606,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" />
+        <Button x:Name="AddButton" Content="Додати книгу" HorizontalAlignment="Left" Margin="294,691,0,0" VerticalAlignment="Top" Width="207" Height="29" Click="AddButton_Click" Cursor="Hand" />
+
+
+
+    </Grid>
+</Window>

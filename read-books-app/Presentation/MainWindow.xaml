@@ -26,29 +26,14 @@
     </Window.Resources>
     <Grid>
         <Label Content="Книжки, які планую прочитати" HorizontalAlignment="Left" Margin="30,38,0,0" VerticalAlignment="Top" Width="224"/>
-        <Label Content="Книжки, які прочитав" HorizontalAlignment="Left" Margin="581,38,0,0" VerticalAlignment="Top"/>
+        <Label Content="Книжки, які прочитав" HorizontalAlignment="Left" Margin="533,38,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="30,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="634" IsReadOnly="True"/>
         <TextBox HorizontalAlignment="Left" Margin="533,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="634" IsReadOnly="True"/>
         <Button x:Name="AddBookButton" Content="+" HorizontalAlignment="Left" Height="66" Margin="359,232,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click"/>
         <Label x:Name="AddBookLabel" Content="Додати книгу" HorizontalAlignment="Left" Height="35" Margin="352,315,0,0" VerticalAlignment="Top" Width="86" FlowDirection="LeftToRight"/>
         <Label Content="Графік прочитаних сторінок" HorizontalAlignment="Center" Margin="0,755,0,0" VerticalAlignment="Top"/>
         <Canvas Margin="85,798,85,67"/>
-        <Label Content="Назва" HorizontalAlignment="Left" Margin="294,86,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
         <TextBox HorizontalAlignment="Left" Margin="294,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" Visibility="Collapsed"/>
-        <Label x:Name="AuthorLabel" Content="Автор" HorizontalAlignment="Left" Margin="294,176,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
-        <TextBox x:Name="AuthorTextBox" HorizontalAlignment="Left" Margin="294,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" Visibility="Collapsed"/>
-        <Label x:Name="NameLabel" Content="Назва" HorizontalAlignment="Left" Margin="294,86,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
-        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="294,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" Visibility="Collapsed"/>
-        <Label x:Name="ReviewLabel" Content="Короткі враження" HorizontalAlignment="Left" Margin="294,283,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
-        <TextBox x:Name="ReviewTextBox" HorizontalAlignment="Left" Margin="294,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="103" Visibility="Collapsed"/>
-        <Label x:Name="ReadLabel" Content="Прочитані" HorizontalAlignment="Left" Margin="294,500,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
-        <TextBox x:Name="ReadTextBox" HorizontalAlignment="Left" Margin="294,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="29" Visibility="Collapsed"/>
-        <Label x:Name="PagesLabel" Content="Кількість сторінок" HorizontalAlignment="Left" Margin="294,469,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
-        <Label x:Name="AllLabel" Content="Всього" HorizontalAlignment="Left" Margin="416,500,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
-        <TextBox x:Name="AllTextBox" HorizontalAlignment="Left" Margin="416,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="29" Visibility="Collapsed"/>
-        <Button x:Name="SaveButton" Content="Зберегти" HorizontalAlignment="Left" Margin="294,606,0,0" VerticalAlignment="Top" Width="101" Height="29" Visibility="Collapsed"/>
-        <Button x:Name="DeleteButton" Content="Видалити" HorizontalAlignment="Left" Margin="400,606,0,0" VerticalAlignment="Top" Width="101" Height="29" Visibility="Collapsed"/>
-        <Button x:Name="AddButton" Content="Додати книгу" HorizontalAlignment="Left" Margin="294,691,0,0" VerticalAlignment="Top" Width="207" Height="29" Click="AddButton_Click" Visibility="Collapsed"/>
 
 
 

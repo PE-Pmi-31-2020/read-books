@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -11,22 +11,21 @@ using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DAL;
 
 namespace Presentation
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddBookWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddBookWindow : Window
     {
-        public MainWindow()
+        public AddBookWindow()
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
         }
-
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             IntPtr windowHandle = new WindowInteropHelper(this).Handle;
@@ -36,7 +35,7 @@ namespace Presentation
 
         private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
-            if((msg == 0xa4))
+            if ((msg == 0xa4))
             {
                 ShowContextMenu();
                 handled = true;
@@ -48,13 +47,6 @@ namespace Presentation
         {
             var contextMenu = Resources["contextMenu"] as ContextMenu;
             contextMenu.IsOpen = true;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           AddBookWindow window = new AddBookWindow();
-           window.Show();
-           this.Close();
         }
 
         private void SettingButton_Click(object sender, RoutedEventArgs e)
@@ -75,7 +67,47 @@ namespace Presentation
             loginWindow.Show();
             this.Close();
         }
-       
 
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Validate();
+                MainWindow window = new MainWindow();
+                window.Show();
+                this.Close();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        private void Validate()
+        {
+            if (string.IsNullOrEmpty(NameTextBox.Text) || string.IsNullOrEmpty(AuthorTextBox.Text) || string.IsNullOrEmpty(ReadTextBox.Text) ||
+                string.IsNullOrEmpty(AllTextBox.Text))
+            {
+                throw new FormatException("Error! Required field is not filled!");
+            }
+
+            if (!Regex.IsMatch(AuthorTextBox.Text, @"^[a-zA-Z-А-Яа-яёЁЇїІіЄєҐґ]+$") ||
+                !Regex.IsMatch(NameTextBox.Text, @"^[a-zA-Z-А-Яа-яёЁЇїІіЄєҐґ]+$"))
+            {
+                throw new FormatException("Error! Only letters can be entered in the field!");
+            }
+
+            if (!ReadTextBox.Text.All(c => c >= '0' && c <= '9') || !AllTextBox.Text.All(c => c >= '0' && c <= '9'))
+            {
+                throw new FormatException("Error! Only numbers can be entered in the field!");
+            }
+
+            if (Convert.ToInt32(ReadTextBox.Text) > Convert.ToInt32(AllTextBox.Text))
+            {
+                throw new FormatException(
+                    "Error! The number of pages read is less than the total number of pages!");
+            }
+        }
     }
 }
