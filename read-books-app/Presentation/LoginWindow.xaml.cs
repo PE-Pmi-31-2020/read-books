@@ -21,7 +21,6 @@ namespace Presentation
         {
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
@@ -44,6 +43,20 @@ namespace Presentation
             {
                 DragMove();
             }
+        }
+
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
+        }
+
+        private void PasswordBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            PasswordBox pb = (PasswordBox)sender;
+            pb.Password = string.Empty;
+            pb.GotFocus -= PasswordBox_GotFocus;
         }
     }
 }
