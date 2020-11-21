@@ -44,9 +44,9 @@
         <Label x:Name="PagesLabel" Content="Кількість сторінок" HorizontalAlignment="Left" Margin="294,469,0,0" VerticalAlignment="Top" />
         <Label x:Name="AllLabel" Content="Всього" HorizontalAlignment="Left" Margin="416,500,0,0" VerticalAlignment="Top" />
         <TextBox x:Name="AllTextBox" HorizontalAlignment="Left" Margin="416,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="29" />
-        <Button x:Name="SaveButton" Content="Зберегти" HorizontalAlignment="Left" Margin="294,606,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" />
-        <Button x:Name="DeleteButton" Content="Видалити" HorizontalAlignment="Left" Margin="400,606,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" />
-        <Button x:Name="AddButton" Content="Додати книгу" HorizontalAlignment="Left" Margin="294,691,0,0" VerticalAlignment="Top" Width="207" Height="29" Click="AddButton_Click" Cursor="Hand" />
+        <Button x:Name="SaveButton" Content="Зберегти" HorizontalAlignment="Left" Margin="294,606,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF716A76" />
+        <Button x:Name="DeleteButton" Content="Видалити" HorizontalAlignment="Left" Margin="400,606,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF716A76" />
+        <Button x:Name="AddButton" Content="Додати книгу" HorizontalAlignment="Left" Margin="294,691,0,0" VerticalAlignment="Top" Width="207" Height="29" Click="AddButton_Click" Cursor="Hand" Background="#FF716A76" />
 
 
 

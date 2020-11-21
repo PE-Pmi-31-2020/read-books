@@ -29,7 +29,14 @@
         <Label Content="Книжки, які прочитав" HorizontalAlignment="Left" Margin="533,38,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="30,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="634" IsReadOnly="True"/>
         <TextBox HorizontalAlignment="Left" Margin="533,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="634" IsReadOnly="True"/>
-        <Button x:Name="AddBookButton" Content="+" HorizontalAlignment="Left" Height="66" Margin="359,232,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click"/>
+        <Button x:Name="AddBookButton"  HorizontalAlignment="Left" Height="66" Margin="359,232,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click" Background="#FF716A76">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Image Source="Images\plus_sign.png"></Image>
+        </Button>
+            
+
         <Label x:Name="AddBookLabel" Content="Додати книгу" HorizontalAlignment="Left" Height="35" Margin="352,315,0,0" VerticalAlignment="Top" Width="86" FlowDirection="LeftToRight"/>
         <Label Content="Графік прочитаних сторінок" HorizontalAlignment="Center" Margin="0,755,0,0" VerticalAlignment="Top"/>
         <Canvas Margin="85,798,85,67"/>

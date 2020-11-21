@@ -7,10 +7,19 @@
         mc:Ignorable="d"
         Title="Settings" Height="450" Width="800">
     <Grid>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="31*"/>
         </Grid.ColumnDefinitions>
+        <Border Grid.ColumnSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#F8F9F9" Offset="0.0"/>
+                    <GradientStop Color="#515A5A" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
         <Label Content="Відображати графік прочитаних сторінок за період часу:" Grid.Column="1" HorizontalAlignment="Left" Margin="55,43,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="день" Grid.Column="1" HorizontalAlignment="Left" Margin="55,74,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="тиждень" Grid.Column="1" HorizontalAlignment="Left" Margin="55,94,0,0" VerticalAlignment="Top"/>
@@ -20,12 +29,12 @@
         <RadioButton Content="вимкнути" Grid.Column="1" HorizontalAlignment="Left" Margin="55,202,0,0" VerticalAlignment="Top"/>
         <Label Content="Час для сповіщення:" Grid.Column="1" HorizontalAlignment="Left" Margin="55,237,0,0" VerticalAlignment="Top"/>
         <Label Content=":" Grid.Column="1" HorizontalAlignment="Left" Margin="108,273,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="AddButtonClock" Content="+" Grid.Column="1" HorizontalAlignment="Left" Margin="191,273,0,0" VerticalAlignment="Top" Height="18" Width="17" Click="Button_Click"/>
+        <Button x:Name="AddButtonClock" Content="+" Grid.Column="1" HorizontalAlignment="Left" Margin="191,273,0,0" VerticalAlignment="Top" Height="18" Width="17" Click="Button_Click" Background="#FF716A76"/>
         <TextBox x:Name="HourTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="59,275,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" PreviewTextInput="HourTextBox_PreviewTextInput"/>
         <TextBox x:Name="MinuteTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="124,275,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Height="22" PreviewTextInput ="MinuteTextBox_PreviewTextInput" />
-        <Button x:Name="SubClockButton" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="191,296,0,0" VerticalAlignment="Top" Height="18" Width="17" Click="SubClockButton_Click"/>
+        <Button x:Name="SubClockButton" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="191,296,0,0" VerticalAlignment="Top" Height="18" Width="17" Click="SubClockButton_Click" Background="#FF716A76"/>
 
-        <Button Content="Зберегти зміни" Grid.Column="1" HorizontalAlignment="Left" Margin="55,314,0,0" VerticalAlignment="Top"/>
-
+        <Button Content="Зберегти зміни" Grid.Column="1" HorizontalAlignment="Left" Margin="55,314,0,0" VerticalAlignment="Top" Background="#FF716A76"/>
+        
     </Grid>
 </Window>
