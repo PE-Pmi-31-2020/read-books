@@ -12,10 +12,10 @@ namespace DAL.Repositories
         private StatisticRepository statisticRepository;
         private UserRepository userRepository;
         private bool disposed = false;
-        //public EFUnitOfWork(string connectionString)
-        //{
-        //    db = new ReadBooksContext(connectionString);
-        //}
+        public EFUnitOfWork()
+        {
+            db = new ReadBooksContext();
+        }
         public IRepository<Book> Books
         {
             get
