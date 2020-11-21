@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1200" Width="800">
+        Title="MainWindow" Height="800" Width="800">
     <Window.Resources>
         <ContextMenu x:Key="contextMenu" MenuItem.Checked="ContextMenu_Click">
             <MenuItem Header="Налаштування" Click="SettingButton_Click">
@@ -25,22 +25,29 @@
         </ContextMenu>
     </Window.Resources>
     <Grid>
-        <Label Content="Книжки, які планую прочитати" HorizontalAlignment="Left" Margin="30,38,0,0" VerticalAlignment="Top" Width="224"/>
-        <Label Content="Книжки, які прочитав" HorizontalAlignment="Left" Margin="533,38,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="30,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="634" IsReadOnly="True"/>
-        <TextBox HorizontalAlignment="Left" Margin="533,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="634" IsReadOnly="True"/>
-        <Button x:Name="AddBookButton"  HorizontalAlignment="Left" Height="66" Margin="359,232,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click" Background="#FF716A76">
+        <Canvas Margin="80,454,90,31"/>
+        <Border CornerRadius="10" BorderThickness="2" BorderBrush="White" Margin="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#F8F9F9" Offset="0.0"/>
+                    <GradientStop Color="#515A5A" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Label Content="Книжки, які планую прочитати" HorizontalAlignment="Left" Margin="22,38,0,0" VerticalAlignment="Top" Width="240" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="#FF9C9C9C" HorizontalContentAlignment="Center"/>
+        <Label Content="Книжки, які прочитав" HorizontalAlignment="Left" Margin="529,38,0,0" VerticalAlignment="Top" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="#FF9C9C9C" Width="232" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="PlanTextBox" HorizontalAlignment="Left" Margin="30,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="286" IsReadOnly="True"/>
+        <TextBox x:Name="ReadTextBox" HorizontalAlignment="Left" Margin="533,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="286" IsReadOnly="True"/>
+        <Button x:Name="AddBookButton"  HorizontalAlignment="Left" Height="66" Margin="359,196,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click" Background="#FF716A76">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Image Source="Images\plus_sign.png"></Image>
         </Button>
-            
-
-        <Label x:Name="AddBookLabel" Content="Додати книгу" HorizontalAlignment="Left" Height="35" Margin="352,315,0,0" VerticalAlignment="Top" Width="86" FlowDirection="LeftToRight"/>
-        <Label Content="Графік прочитаних сторінок" HorizontalAlignment="Center" Margin="0,755,0,0" VerticalAlignment="Top"/>
-        <Canvas Margin="85,798,85,67"/>
+        <Label x:Name="AddBookLabel" Content="Додати книгу" HorizontalAlignment="Left" Height="35" Margin="340,267,0,0" VerticalAlignment="Top" Width="110" FlowDirection="LeftToRight" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed"/>
+        <Label Content="Графік прочитаних сторінок" HorizontalAlignment="Left" Margin="280,390,0,0" VerticalAlignment="Top" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="Gray"/>
         <TextBox HorizontalAlignment="Left" Margin="294,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" Visibility="Collapsed"/>
+
 
 
 

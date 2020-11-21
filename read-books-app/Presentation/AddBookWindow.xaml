@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation"
         mc:Ignorable="d"
-        Title="AddBookWindow" Height="1200" Width="800">
+        Title="AddBookWindow" Height="600" Width="800">
     <Window.Resources>
         <ContextMenu x:Key="contextMenu" MenuItem.Checked="ContextMenu_Click">
             <MenuItem Header="Налаштування" Click="SettingButton_Click">
@@ -25,30 +25,58 @@
         </ContextMenu>
     </Window.Resources>
     <Grid>
-        <Label Content="Книжки, які планую прочитати" HorizontalAlignment="Left" Margin="30,38,0,0" VerticalAlignment="Top" Width="224"/>
-        <Label Content="Книжки, які прочитав" HorizontalAlignment="Left" Margin="533,38,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="30,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="634" IsReadOnly="True"/>
-        <TextBox HorizontalAlignment="Left" Margin="533,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="634" IsReadOnly="True"/>
-        <Label Content="Графік прочитаних сторінок" HorizontalAlignment="Center" Margin="0,755,0,0" VerticalAlignment="Top"/>
-        <Canvas Margin="85,798,85,67"/>
-        <Label Content="Назва" HorizontalAlignment="Left" Margin="294,86,0,0" VerticalAlignment="Top" />
-        <TextBox HorizontalAlignment="Left" Margin="294,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" />
-        <Label x:Name="AuthorLabel" Content="Автор" HorizontalAlignment="Left" Margin="294,176,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="AuthorTextBox" HorizontalAlignment="Left" Margin="294,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" />
-        <Label x:Name="NameLabel" Content="Назва" HorizontalAlignment="Left" Margin="294,86,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="294,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" />
-        <Label x:Name="ReviewLabel" Content="Короткі враження" HorizontalAlignment="Left" Margin="294,283,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="ReviewTextBox" HorizontalAlignment="Left" Margin="294,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="103" Cursor="" />
-        <Label x:Name="ReadLabel" Content="Прочитані" HorizontalAlignment="Left" Margin="294,500,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="ReadTextBox" HorizontalAlignment="Left" Margin="294,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="29" />
-        <Label x:Name="PagesLabel" Content="Кількість сторінок" HorizontalAlignment="Left" Margin="294,469,0,0" VerticalAlignment="Top" />
-        <Label x:Name="AllLabel" Content="Всього" HorizontalAlignment="Left" Margin="416,500,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="AllTextBox" HorizontalAlignment="Left" Margin="416,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="29" />
-        <Button x:Name="SaveButton" Content="Зберегти" HorizontalAlignment="Left" Margin="294,606,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF716A76" />
-        <Button x:Name="DeleteButton" Content="Видалити" HorizontalAlignment="Left" Margin="400,606,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF716A76" />
-        <Button x:Name="AddButton" Content="Додати книгу" HorizontalAlignment="Left" Margin="294,691,0,0" VerticalAlignment="Top" Width="207" Height="29" Click="AddButton_Click" Cursor="Hand" Background="#FF716A76" />
+        <Border CornerRadius="10" BorderThickness="2" BorderBrush="White" Margin="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#F8F9F9" Offset="0.0"/>
+                    <GradientStop Color="#515A5A" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Label Content="Книжки, які планую прочитати" HorizontalAlignment="Left" Margin="22,38,0,0" VerticalAlignment="Top" Width="240" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="#FF9C9C9C" HorizontalContentAlignment="Center"/>
+        <Label Content="Книжки, які прочитав" HorizontalAlignment="Left" Margin="529,38,0,0" VerticalAlignment="Top" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="#FF9C9C9C" Width="232" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="PlannedBooks" HorizontalAlignment="Left" Margin="30,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="453" IsReadOnly="True"/>
+        <TextBox x:Name="ReadBooksTextBox" HorizontalAlignment="Left" Margin="533,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="453" IsReadOnly="True"/>
+        <Label Content="Назва" HorizontalAlignment="Left" Margin="294,86,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial Nova Cond" />
+        <Label x:Name="AuthorLabel" Content="Автор" HorizontalAlignment="Left" Margin="294,150,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial Nova Cond" />
+        <TextBox x:Name="AuthorTextBox" HorizontalAlignment="Left" Margin="294,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" />
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="295,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="29" />
+        <Label x:Name="ReviewLabel" Content="Короткі враження" HorizontalAlignment="Left" Margin="294,218,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial Nova Cond" />
+        <TextBox x:Name="ReviewTextBox" HorizontalAlignment="Left" Margin="294,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="103" Cursor="" />
+        <Label x:Name="ReadLabel" Content="Прочитані" HorizontalAlignment="Left" Margin="295,396,0,0" VerticalAlignment="Top" FontFamily="Arial Nova Cond" FontSize="14" />
+        <TextBox x:Name="ReadTextBox" HorizontalAlignment="Left" Margin="295,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="29" />
+        <Label x:Name="PagesLabel" Content="Кількість сторінок" HorizontalAlignment="Left" Margin="295,365,0,0" VerticalAlignment="Top" FontFamily="Arial Nova Cond" FontSize="14" />
+        <Label x:Name="AllLabel" Content="Всього" HorizontalAlignment="Left" Margin="417,396,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial Nova Cond" />
+        <TextBox x:Name="AllTextBox" HorizontalAlignment="Left" Margin="417,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="29" />
+        <Button x:Name="SaveButton" Content="Зберегти" HorizontalAlignment="Left" Margin="295,468,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF9C9C9C" FontFamily="Arial Nova Cond" FontSize="14" />
+        <Button x:Name="DeleteButton" Content="Видалити" HorizontalAlignment="Left" Margin="401,468,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF9C9C9C" FontSize="14" FontFamily="Arial Nova Cond" />
+        <Button x:Name="AddButton" Content="Додати книгу" HorizontalAlignment="Left" Margin="294,510,0,0" VerticalAlignment="Top" Width="207" Height="29" Click="AddButton_Click" Background="#FF9C9C9C" Cursor="Hand" FontSize="14" FontFamily="Arial Nova Cond" />
 
 
 
     </Grid>
 </Window>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
