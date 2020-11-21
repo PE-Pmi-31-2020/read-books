@@ -21,6 +21,7 @@ namespace Presentation
     /// </summary>
     public partial class AddBookWindow : Window
     {
+        Book modelBook = new Book();
         public AddBookWindow()
         {
             InitializeComponent();
@@ -73,6 +74,15 @@ namespace Presentation
             try
             {
                 Validate();
+                modelBook.Name = NameTextBox.Text;
+                modelBook.Author = AuthorTextBox.Text;
+                modelBook.Pages = Convert.ToInt32(AllTextBox.Text);
+
+                using (ReadBooksContext db = new ReadBooksContext())
+                {
+                    db.Books.Add(modelBook);
+                    db.SaveChanges();
+                }
                 MainWindow window = new MainWindow();
                 window.Show();
                 this.Close();
@@ -92,8 +102,8 @@ namespace Presentation
                 throw new FormatException("Error! Required field is not filled!");
             }
 
-            if (!Regex.IsMatch(AuthorTextBox.Text, @"^[a-zA-Z-А-Яа-яёЁЇїІіЄєҐґ]+$") ||
-                !Regex.IsMatch(NameTextBox.Text, @"^[a-zA-Z-А-Яа-яёЁЇїІіЄєҐґ]+$"))
+            if (!Regex.IsMatch(AuthorTextBox.Text, @"^[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ _]*[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ][A-Za-z-А-Яа-яёЁЇїІіЄєҐґ _]*$") ||
+                !Regex.IsMatch(NameTextBox.Text, @"^[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ0-9 _]*[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ0-9][A-Za-z-А-Яа-яёЁЇїІіЄєҐґ0-9 _]*$"))
             {
                 throw new FormatException("Error! Only letters can be entered in the field!");
             }
