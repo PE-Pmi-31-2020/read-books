@@ -1,5 +1,7 @@
-﻿using BLL.DataTransferObjects;
+﻿using AutoMapper;
+using BLL.DataTransferObjects;
 using BLL.Interfaces;
+using DAL;
 using DAL.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,9 +12,19 @@ namespace BLL.Services
     class StatisticService : IStatisticService
     {
         IUnitOfWork DataBase { get; set; }
-        public void CreateStatistic(BookDTO bookDTO, UserDTO userDTO)
+        public void CreateStatistic(BookDTO bookDTO, UserDTO userDTO, int readedPages, string review)
         {
-            throw new NotImplementedException();
+            User user = DataBase.Users.Get(userDTO.Id);
+            Book book = DataBase.Books.Get(bookDTO.Id);
+            Statistic statistic = new Statistic
+            {
+                UserId = user.Id,
+                BookId = book.Id,
+                ReadedPages = readedPages,
+                Review = review
+            };
+            DataBase.Statistics.Create(statistic);
+            DataBase.Save();
         }
         public StatisticService(IUnitOfWork unitOfWork)
         {
@@ -26,12 +38,50 @@ namespace BLL.Services
 
         public List<BookDTO> GetBooksToRead(int userId)
         {
-            throw new NotImplementedException();
+            var bookMapper = new MapperConfiguration(cfg => cfg.CreateMap<Book, BookDTO>())
+                .CreateMapper();
+            List<BookDTO> allBooks = bookMapper.Map<IEnumerable<Book>, List<BookDTO>>(DataBase.Books.GetAll());
+
+            var statisticMapper = new MapperConfiguration(cfg => cfg.CreateMap<Statistic, StatisticDTO>())
+                .CreateMapper();
+            List<StatisticDTO> allStatistic = statisticMapper.Map<IEnumerable<Statistic>, List<StatisticDTO>>(DataBase.Statistics.GetAll());
+
+            List<BookDTO> booksToRead = new List<BookDTO>();
+            foreach (var book in allBooks)
+            {
+                foreach (var statistic in allStatistic)
+                {
+                    if(book.Id == statistic.BookId && statistic.UserId == userId && book.Pages > statistic.ReadedPages)
+                    {
+                        booksToRead.Add(book);
+                    }
+                }
+            }
+            return booksToRead;
         }
 
         public List<BookDTO> GetReadedBooks(int userId)
         {
-            throw new NotImplementedException();
+            var bookMapper = new MapperConfiguration(cfg => cfg.CreateMap<Book, BookDTO>())
+                .CreateMapper();
+            List<BookDTO> allBooks = bookMapper.Map<IEnumerable<Book>, List<BookDTO>>(DataBase.Books.GetAll());
+
+            var statisticMapper = new MapperConfiguration(cfg => cfg.CreateMap<Statistic, StatisticDTO>())
+                .CreateMapper();
+            List<StatisticDTO> allStatistic = statisticMapper.Map<IEnumerable<Statistic>, List<StatisticDTO>>(DataBase.Statistics.GetAll());
+
+            List<BookDTO> readedBooks = new List<BookDTO>();
+            foreach (var book in allBooks)
+            {
+                foreach (var statistic in allStatistic)
+                {
+                    if (book.Id == statistic.BookId && statistic.UserId == userId && book.Pages == statistic.ReadedPages)
+                    {
+                        readedBooks.Add(book);
+                    }
+                }
+            }
+            return readedBooks;
         }
     }
 }
