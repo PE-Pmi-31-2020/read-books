@@ -22,6 +22,7 @@ namespace Presentation
     public partial class AddBookWindow : Window
     {
         Book modelBook = new Book();
+        Statistic modelStatistic = new Statistic();
         public AddBookWindow()
         {
             InitializeComponent();
@@ -77,6 +78,8 @@ namespace Presentation
                 modelBook.Name = NameTextBox.Text;
                 modelBook.Author = AuthorTextBox.Text;
                 modelBook.Pages = Convert.ToInt32(AllTextBox.Text);
+                modelStatistic.ReadedPages = Convert.ToInt32(ReadTextBox.Text);
+                modelStatistic.Review = ReviewTextBox.Text;
 
                 using (ReadBooksContext db = new ReadBooksContext())
                 {
