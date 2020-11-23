@@ -1,54 +1,61 @@
-﻿using AutoMapper;
-using BLL.DataTransferObjects;
-using BLL.Interfaces;
-using DAL;
-using DAL.Interfaces;
-using DAL.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿// <copyright file="StatisticService.cs" company="BakuninCompany">
+// Copyright (c) BakuninCompany. All rights reserved.
+// </copyright>
 
 namespace BLL.Services
 {
-   public class StatisticService : IStatisticService
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using AutoMapper;
+    using BLL.DataTransferObjects;
+    using BLL.Interfaces;
+    using DAL;
+    using DAL.Interfaces;
+    using DAL.Repositories;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="StatisticService"/> class.
+    /// </summary>
+    public class StatisticService : IStatisticService
     {
-        IUnitOfWork DataBase { get; set; }
-        private void CreateBook(BookDTO bookDTO)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="StatisticService"/> class.
+        /// </summary>
+        public StatisticService()
         {
-            Book book = new Book
-            {
-                Author = bookDTO.Author,
-                Name = bookDTO.Name,
-                Pages = bookDTO.Pages
-            };
-            DataBase.Books.Create(book);
-            DataBase.Save();
+            this.DataBase = new EFUnitOfWork();
         }
+
+        private IUnitOfWork DataBase { get; set; }
+
+        /// <inheritdoc/>
+        public void Dispose()
+        {
+        }
+
+        /// <inheritdoc/>
         public void CreateStatistic(BookDTO bookDTO, UserDTO userDTO, int readedPages, string review)
         {
-            User user = DataBase.Users.Get(userDTO.Id);
-            CreateBook(bookDTO);
-            Book book = DataBase.Books.Get(bookDTO.Id);
+            User user = this.DataBase.Users.Get(userDTO.Id);
+            this.CreateBook(bookDTO);
+            Book book = this.DataBase.Books.Get(bookDTO.Id);
             Statistic statistic = new Statistic
             {
                 UserId = user.Id,
                 BookId = book.Id,
                 ReadedPages = readedPages,
-                Review = review
+                Review = review,
             };
-            DataBase.Statistics.Create(statistic);
-            DataBase.Save();
-        }
-        public StatisticService()
-        {
-            DataBase = new EFUnitOfWork();
+            this.DataBase.Statistics.Create(statistic);
+            this.DataBase.Save();
         }
 
-        public void Dispose()
-        {
-            
-        }
-
+        /// <summary>
+        /// Get books to read.
+        /// </summary>
+        /// <param name="userId">User id.</param>
+        /// <returns>List of books.</returns>
         public List<BookDTO> GetBooksToRead(int userId)
         {
             var bookMapper = new MapperConfiguration(cfg => cfg.CreateMap<Book, BookDTO>())
@@ -64,15 +71,21 @@ namespace BLL.Services
             {
                 foreach (var statistic in allStatistic)
                 {
-                    if(book.Id == statistic.BookId && statistic.UserId == userId && book.Pages > statistic.ReadedPages)
+                    if (book.Id == statistic.BookId && statistic.UserId == userId && book.Pages > statistic.ReadedPages)
                     {
                         booksToRead.Add(book);
                     }
                 }
             }
+
             return booksToRead;
         }
 
+        /// <summary>
+        /// Get readed books.
+        /// </summary>
+        /// <param name="userId">User id.</param>
+        /// <returns>List of books.</returns>
         public List<BookDTO> GetReadedBooks(int userId)
         {
             var bookMapper = new MapperConfiguration(cfg => cfg.CreateMap<Book, BookDTO>())
@@ -94,7 +107,20 @@ namespace BLL.Services
                     }
                 }
             }
+
             return readedBooks;
+        }
+
+        private void CreateBook(BookDTO bookDTO)
+        {
+            Book book = new Book
+            {
+                Author = bookDTO.Author,
+                Name = bookDTO.Name,
+                Pages = bookDTO.Pages,
+            };
+            this.DataBase.Books.Create(book);
+            this.DataBase.Save();
         }
     }
 }
