@@ -13,6 +13,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BLL.DataTransferObjects;
+using BLL.Services;
+using BLL.Interfaces;
+
 
 namespace Presentation
 {
@@ -21,6 +25,7 @@ namespace Presentation
     /// </summary>
     public partial class MainWindow : Window
     {
+        IStatisticService service = new StatisticService();
         public MainWindow()
         {
             InitializeComponent();
@@ -29,7 +34,7 @@ namespace Presentation
 
             foreach (var p in book_list)
             {
-                PlannedList.Items.Add(p.Name.ToString());
+                PlannedListBox.Items.Add(p.Name.ToString());
             }
         }
 
