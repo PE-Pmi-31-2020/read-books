@@ -33,11 +33,11 @@
                     <GradientStop Color="#515A5A" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <ListBox x:Name="PlannedListBox" Margin="21,82,524,407"/>
         </Border>
+        <ListBox x:Name="PlannedListBox" Margin="14,82,530,407"/>
+
         <Label Content="Книжки, які планую прочитати" HorizontalAlignment="Left" Margin="22,38,0,0" VerticalAlignment="Top" Width="240" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="#FF9C9C9C" HorizontalContentAlignment="Center"/>
         <Label Content="Книжки, які прочитав" HorizontalAlignment="Left" Margin="529,38,0,0" VerticalAlignment="Top" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="#FF9C9C9C" Width="232" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="ReadTextBox" HorizontalAlignment="Left" Margin="533,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="286" IsReadOnly="True"/>
         <Button x:Name="AddBookButton"  HorizontalAlignment="Left" Height="66" Margin="359,196,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click" Background="#FF716A76">
             <Button.Effect>
                 <DropShadowEffect/>
@@ -47,6 +47,7 @@
         <Label x:Name="AddBookLabel" Content="Додати книгу" HorizontalAlignment="Left" Height="35" Margin="340,267,0,0" VerticalAlignment="Top" Width="110" FlowDirection="LeftToRight" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed"/>
         <Label Content="Графік прочитаних сторінок" HorizontalAlignment="Left" Margin="280,390,0,0" VerticalAlignment="Top" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="Gray"/>
         <TextBox HorizontalAlignment="Left" Margin="294,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" Visibility="Collapsed"/>
+        <ListBox x:Name="ReadListBox" Margin="518,82,28,407"/>
 
 
 

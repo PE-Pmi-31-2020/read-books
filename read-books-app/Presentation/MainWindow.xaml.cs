@@ -14,9 +14,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BLL.DataTransferObjects;
+<<<<<<< Updated upstream
 using BLL.Services;
 using BLL.Interfaces;
 
+=======
+using BLL.Interfaces;
+using BLL.Services;
+>>>>>>> Stashed changes
 
 namespace Presentation
 {
@@ -31,10 +36,18 @@ namespace Presentation
             InitializeComponent();
             Loaded += MainWindow_Loaded;
             List<BookDTO> book_list = service.GetBooksToRead(27).ToList();
+            List<BookDTO> read_book_list = service.GetReadedBooks(27).ToList();
 
             foreach (var p in book_list)
             {
                 PlannedListBox.Items.Add(p.Name.ToString());
+<<<<<<< Updated upstream
+=======
+            }
+            foreach (var p in read_book_list)
+            {
+                ReadListBox.Items.Add(p.Name.ToString());
+>>>>>>> Stashed changes
             }
         }
 

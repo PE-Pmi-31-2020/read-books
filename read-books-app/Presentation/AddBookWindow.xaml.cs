@@ -32,10 +32,15 @@ namespace Presentation
             InitializeComponent();
             Loaded += MainWindow_Loaded;
             List<BookDTO> book_list =  service.GetBooksToRead(27).ToList();
+            List<BookDTO> read_book_list =  service.GetReadedBooks(27).ToList();
 
             foreach (var p in book_list)
             {
                 PlannedList.Items.Add(p.Name.ToString());
+            } 
+            foreach (var p in read_book_list)
+            {
+                ReadBooksList.Items.Add(p.Name.ToString());
             }
         }
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
