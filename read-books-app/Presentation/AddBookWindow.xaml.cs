@@ -1,68 +1,79 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Interop;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using DAL;
-using BLL.Services;
-using BLL.Interfaces;
-using BLL.DataTransferObjects;
+﻿// <copyright file="AddBookWindow.xaml.cs" company="BakuninCompany">
+// Copyright (c) BakuninCompany. All rights reserved.
+// </copyright>
 
 namespace Presentation
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Text.RegularExpressions;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Data;
+    using System.Windows.Documents;
+    using System.Windows.Input;
+    using System.Windows.Interop;
+    using System.Windows.Media;
+    using System.Windows.Media.Imaging;
+    using System.Windows.Shapes;
+    using BLL.DataTransferObjects;
+    using BLL.Interfaces;
+    using BLL.Services;
+    using DAL;
+
     /// <summary>
-    /// Interaction logic for AddBookWindow.xaml
+    /// Interaction logic for AddBookWindow.xaml.
     /// </summary>
     public partial class AddBookWindow : Window
     {
-        IStatisticService service = new StatisticService();
-        Book modelBook = new Book();
-        Statistic modelStatistic = new Statistic();
+        private IStatisticService service = new StatisticService();
+        private Book modelBook = new Book();
+        private Statistic modelStatistic = new Statistic();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AddBookWindow"/> class.
+        /// </summary>
         public AddBookWindow()
         {
-            InitializeComponent();
-            Loaded += MainWindow_Loaded;
-            List<BookDTO> book_list =  service.GetBooksToRead(27).ToList();
-            List<BookDTO> read_book_list =  service.GetReadedBooks(27).ToList();
+            this.InitializeComponent();
+            this.Loaded += this.MainWindow_Loaded;
+            List<BookDTO> book_list = this.service.GetBooksToRead(27).ToList();
+            List<BookDTO> read_book_list = this.service.GetReadedBooks(27).ToList();
 
             foreach (var p in book_list)
             {
-                PlannedList.Items.Add(p.Name.ToString());
-            } 
+                this.PlannedList.Items.Add(p.Name.ToString());
+            }
+
             foreach (var p in read_book_list)
             {
-                ReadBooksList.Items.Add(p.Name.ToString());
+                this.ReadBooksList.Items.Add(p.Name.ToString());
             }
         }
+
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             IntPtr windowHandle = new WindowInteropHelper(this).Handle;
             HwndSource hwndSource = HwndSource.FromHwnd(windowHandle);
-            hwndSource.AddHook(new HwndSourceHook(WndProc));
+            hwndSource.AddHook(new HwndSourceHook(this.WndProc));
         }
 
         private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
-            if ((msg == 0xa4))
+            if (msg == 0xa4)
             {
-                ShowContextMenu();
+                this.ShowContextMenu();
                 handled = true;
             }
+
             return IntPtr.Zero;
         }
 
         private void ShowContextMenu()
         {
-            var contextMenu = Resources["contextMenu"] as ContextMenu;
+            var contextMenu = this.Resources["contextMenu"] as ContextMenu;
             contextMenu.IsOpen = true;
         }
 
@@ -89,21 +100,20 @@ namespace Presentation
         {
             try
             {
-                Validate();
+                this.Validate();
 
-
-
-                modelBook.Name = NameTextBox.Text;
-                modelBook.Author = AuthorTextBox.Text;
-                modelBook.Pages = Convert.ToInt32(AllTextBox.Text);
-                modelStatistic.ReadedPages = Convert.ToInt32(ReadTextBox.Text);
-                modelStatistic.Review = ReviewTextBox.Text;
+                this.modelBook.Name = this.NameTextBox.Text;
+                this.modelBook.Author = this.AuthorTextBox.Text;
+                this.modelBook.Pages = Convert.ToInt32(this.AllTextBox.Text);
+                this.modelStatistic.ReadedPages = Convert.ToInt32(this.ReadTextBox.Text);
+                this.modelStatistic.Review = this.ReviewTextBox.Text;
 
                 using (ReadBooksContext db = new ReadBooksContext())
                 {
-                    db.Books.Add(modelBook);
+                    db.Books.Add(this.modelBook);
                     db.SaveChanges();
                 }
+
                 MainWindow window = new MainWindow();
                 window.Show();
                 this.Close();
@@ -111,30 +121,29 @@ namespace Presentation
             catch (FormatException ex)
             {
                 MessageBox.Show(ex.Message);
-
             }
         }
 
         private void Validate()
         {
-            if (string.IsNullOrEmpty(NameTextBox.Text) || string.IsNullOrEmpty(AuthorTextBox.Text) || string.IsNullOrEmpty(ReadTextBox.Text) ||
-                string.IsNullOrEmpty(AllTextBox.Text))
+            if (string.IsNullOrEmpty(this.NameTextBox.Text) || string.IsNullOrEmpty(this.AuthorTextBox.Text) || string.IsNullOrEmpty(this.ReadTextBox.Text) ||
+                string.IsNullOrEmpty(this.AllTextBox.Text))
             {
                 throw new FormatException("Error! Required field is not filled!");
             }
 
-            if (!Regex.IsMatch(AuthorTextBox.Text, @"^[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ _]*[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ][A-Za-z-А-Яа-яёЁЇїІіЄєҐґ _]*$") ||
-                !Regex.IsMatch(NameTextBox.Text, @"^[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ0-9 _]*[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ0-9][A-Za-z-А-Яа-яёЁЇїІіЄєҐґ0-9 _]*$"))
+            if (!Regex.IsMatch(this.AuthorTextBox.Text, @"^[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ _]*[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ][A-Za-z-А-Яа-яёЁЇїІіЄєҐґ _]*$") ||
+                !Regex.IsMatch(this.NameTextBox.Text, @"^[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ0-9 _]*[A-Za-z-А-Яа-яёЁЇїІіЄєҐґ0-9][A-Za-z-А-Яа-яёЁЇїІіЄєҐґ0-9 _]*$"))
             {
                 throw new FormatException("Error! Only letters can be entered in the field!");
             }
 
-            if (!ReadTextBox.Text.All(c => c >= '0' && c <= '9') || !AllTextBox.Text.All(c => c >= '0' && c <= '9'))
+            if (!this.ReadTextBox.Text.All(c => c >= '0' && c <= '9') || !this.AllTextBox.Text.All(c => c >= '0' && c <= '9'))
             {
                 throw new FormatException("Error! Only numbers can be entered in the field!");
             }
 
-            if (Convert.ToInt32(ReadTextBox.Text) > Convert.ToInt32(AllTextBox.Text))
+            if (Convert.ToInt32(this.ReadTextBox.Text) > Convert.ToInt32(this.AllTextBox.Text))
             {
                 throw new FormatException(
                     "Error! The number of pages read is less than the total number of pages!");
