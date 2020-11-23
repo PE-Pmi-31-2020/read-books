@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using DAL;
 using BLL.Services;
 using BLL.Interfaces;
-
+using BLL.DataTransferObjects;
 
 namespace Presentation
 {
@@ -25,12 +25,18 @@ namespace Presentation
     public partial class AddBookWindow : Window
     {
         IStatisticService service = new StatisticService();
-        //Book modelBook = new Book();
-        //Statistic modelStatistic = new Statistic();
+        Book modelBook = new Book();
+        Statistic modelStatistic = new Statistic();
         public AddBookWindow()
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
+            List<BookDTO> book_list =  service.GetBooksToRead(27).ToList();
+
+            foreach (var p in book_list)
+            {
+                PlannedList.Items.Add(p.Name.ToString());
+            }
         }
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
@@ -79,26 +85,23 @@ namespace Presentation
             try
             {
                 Validate();
-                
 
-                foreach(var p in service.GetBooksToRead(10))
+
+
+                modelBook.Name = NameTextBox.Text;
+                modelBook.Author = AuthorTextBox.Text;
+                modelBook.Pages = Convert.ToInt32(AllTextBox.Text);
+                modelStatistic.ReadedPages = Convert.ToInt32(ReadTextBox.Text);
+                modelStatistic.Review = ReviewTextBox.Text;
+
+                using (ReadBooksContext db = new ReadBooksContext())
                 {
-                    PlannedBooks.Text = p.Name + '\n';
+                    db.Books.Add(modelBook);
+                    db.SaveChanges();
                 }
-                //modelBook.Name = NameTextBox.Text;
-                //modelBook.Author = AuthorTextBox.Text;
-                //modelBook.Pages = Convert.ToInt32(AllTextBox.Text);
-                //modelStatistic.ReadedPages = Convert.ToInt32(ReadTextBox.Text);
-                //modelStatistic.Review = ReviewTextBox.Text;
-
-                //using (ReadBooksContext db = new ReadBooksContext())
-                //{
-                //    db.Books.Add(modelBook);
-                //    db.SaveChanges();
-                //}
-               // MainWindow window = new MainWindow();
-               // window.Show();
-               // this.Close();
+                MainWindow window = new MainWindow();
+                window.Show();
+                this.Close();
             }
             catch (FormatException ex)
             {
