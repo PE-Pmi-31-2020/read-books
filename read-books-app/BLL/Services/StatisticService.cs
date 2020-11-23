@@ -13,9 +13,21 @@ namespace BLL.Services
    public class StatisticService : IStatisticService
     {
         IUnitOfWork DataBase { get; set; }
+        private void CreateBook(BookDTO bookDTO)
+        {
+            Book book = new Book
+            {
+                Author = bookDTO.Author,
+                Name = bookDTO.Name,
+                Pages = bookDTO.Pages
+            };
+            DataBase.Books.Create(book);
+            DataBase.Save();
+        }
         public void CreateStatistic(BookDTO bookDTO, UserDTO userDTO, int readedPages, string review)
         {
             User user = DataBase.Users.Get(userDTO.Id);
+            CreateBook(bookDTO);
             Book book = DataBase.Books.Get(bookDTO.Id);
             Statistic statistic = new Statistic
             {
