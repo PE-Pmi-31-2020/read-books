@@ -3,6 +3,7 @@ using BLL.DataTransferObjects;
 using BLL.Interfaces;
 using DAL;
 using DAL.Interfaces;
+using DAL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -26,9 +27,9 @@ namespace BLL.Services
             DataBase.Statistics.Create(statistic);
             DataBase.Save();
         }
-        public StatisticService(IUnitOfWork unitOfWork)
+        public StatisticService()
         {
-            DataBase = unitOfWork;
+            DataBase = new EFUnitOfWork();
         }
 
         public void Dispose()
