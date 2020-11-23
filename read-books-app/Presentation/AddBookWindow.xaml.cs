@@ -13,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DAL;
+using BLL.Services;
+using BLL.Interfaces;
+
 
 namespace Presentation
 {
@@ -21,8 +24,9 @@ namespace Presentation
     /// </summary>
     public partial class AddBookWindow : Window
     {
-        Book modelBook = new Book();
-        Statistic modelStatistic = new Statistic();
+        IStatisticService service = new StatisticService();
+        //Book modelBook = new Book();
+        //Statistic modelStatistic = new Statistic();
         public AddBookWindow()
         {
             InitializeComponent();
@@ -75,20 +79,26 @@ namespace Presentation
             try
             {
                 Validate();
-                modelBook.Name = NameTextBox.Text;
-                modelBook.Author = AuthorTextBox.Text;
-                modelBook.Pages = Convert.ToInt32(AllTextBox.Text);
-                modelStatistic.ReadedPages = Convert.ToInt32(ReadTextBox.Text);
-                modelStatistic.Review = ReviewTextBox.Text;
+                
 
-                using (ReadBooksContext db = new ReadBooksContext())
+                foreach(var p in service.GetBooksToRead(10))
                 {
-                    db.Books.Add(modelBook);
-                    db.SaveChanges();
+                    PlannedBooks.Text = p.Name + '\n';
                 }
-                MainWindow window = new MainWindow();
-                window.Show();
-                this.Close();
+                //modelBook.Name = NameTextBox.Text;
+                //modelBook.Author = AuthorTextBox.Text;
+                //modelBook.Pages = Convert.ToInt32(AllTextBox.Text);
+                //modelStatistic.ReadedPages = Convert.ToInt32(ReadTextBox.Text);
+                //modelStatistic.Review = ReviewTextBox.Text;
+
+                //using (ReadBooksContext db = new ReadBooksContext())
+                //{
+                //    db.Books.Add(modelBook);
+                //    db.SaveChanges();
+                //}
+               // MainWindow window = new MainWindow();
+               // window.Show();
+               // this.Close();
             }
             catch (FormatException ex)
             {

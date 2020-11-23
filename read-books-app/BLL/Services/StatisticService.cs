@@ -10,7 +10,7 @@ using System.Text;
 
 namespace BLL.Services
 {
-    class StatisticService : IStatisticService
+   public class StatisticService : IStatisticService
     {
         IUnitOfWork DataBase { get; set; }
         public void CreateStatistic(BookDTO bookDTO, UserDTO userDTO, int readedPages, string review)
