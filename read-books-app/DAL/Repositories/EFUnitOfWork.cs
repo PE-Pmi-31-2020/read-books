@@ -1,10 +1,17 @@
-﻿using DAL.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿// <copyright file="EFUnitOfWork.cs" company="BakuninCompany">
+// Copyright (c) BakuninCompany. All rights reserved.
+// </copyright>
 
 namespace DAL.Repositories
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using DAL.Interfaces;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="EFUnitOfWork"/> class.
+    /// </summary>
     public class EFUnitOfWork : IUnitOfWork
     {
         private ReadBooksContext db;
@@ -12,65 +19,95 @@ namespace DAL.Repositories
         private StatisticRepository statisticRepository;
         private UserRepository userRepository;
         private bool disposed = false;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EFUnitOfWork"/> class.
+        /// </summary>
         public EFUnitOfWork()
         {
-            db = new ReadBooksContext();
+            this.db = new ReadBooksContext();
         }
+
+        /// <summary>
+        /// Gets books.
+        /// </summary>
         public IRepository<Book> Books
         {
             get
             {
-                if(bookRepository == null)
+                if (this.bookRepository == null)
                 {
-                    bookRepository = new BookRepository(db);
+                    this.bookRepository = new BookRepository(this.db);
                 }
-                return bookRepository;
+
+                return this.bookRepository;
             }
         }
 
+        /// <summary>
+        /// Gets statistic.
+        /// </summary>
         public IRepository<Statistic> Statistics
         {
             get
             {
-                if (statisticRepository == null)
+                if (this.statisticRepository == null)
                 {
-                    statisticRepository = new StatisticRepository(db);
+                    this.statisticRepository = new StatisticRepository(this.db);
                 }
-                return statisticRepository;
+
+                return this.statisticRepository;
             }
         }
 
+        /// <summary>
+        /// Gets users.
+        /// </summary>
         public IRepository<User> Users
         {
             get
             {
-                if (userRepository == null)
+                if (this.userRepository == null)
                 {
-                    userRepository = new UserRepository(db);
+                    this.userRepository = new UserRepository(this.db);
                 }
-                return userRepository;
+
+                return this.userRepository;
             }
         }
+
+        /// <summary>
+        /// Dispose.
+        /// </summary>
+        /// <param name="disposing">disposing.</param>
         public virtual void Dispose(bool disposing)
         {
             if (!this.disposed)
             {
                 if (disposing)
                 {
-                    db.Dispose();
+                    this.db.Dispose();
                 }
+
                 this.disposed = true;
             }
         }
+
+        /// <summary>
+        /// Dispose.
+        /// </summary>
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
+        /// <summary>
+        /// Save.
+        /// </summary>
         public void Save()
         {
-            db.SaveChanges();
+            this.db.SaveChanges();
         }
     }
 }

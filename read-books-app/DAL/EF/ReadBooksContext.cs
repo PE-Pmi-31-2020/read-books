@@ -1,24 +1,53 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿// <copyright file="ReadBooksContext.cs" company="BakuninCompany">
+// Copyright (c) BakuninCompany. All rights reserved.
+// </copyright>
 
 namespace DAL
 {
+    using System;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Metadata;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ReadBooksContext"/> class.
+    /// </summary>
     public partial class ReadBooksContext : DbContext
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ReadBooksContext"/> class.
+        /// </summary>
         public ReadBooksContext()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ReadBooksContext"/> class.
+        /// </summary>
+        /// <param name="options">options.</param>
         public ReadBooksContext(DbContextOptions<ReadBooksContext> options)
             : base(options)
         {
         }
 
+        /// <summary>
+        /// Gets or sets books.
+        /// </summary>
         public virtual DbSet<Book> Books { get; set; }
+
+        /// <summary>
+        /// Gets or sets statistic.
+        /// </summary>
         public virtual DbSet<Statistic> Statistic { get; set; }
+
+        /// <summary>
+        /// Gets or sets users.
+        /// </summary>
         public virtual DbSet<User> Users { get; set; }
 
+        /// <summary>
+        /// OnConfiguring.
+        /// </summary>
+        /// <param name="optionsBuilder">optionsBuilder.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -27,6 +56,10 @@ namespace DAL
             }
         }
 
+        /// <summary>
+        /// OnModelCreating.
+        /// </summary>
+        /// <param name="modelBuilder">modelBuilder.</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Book>(entity =>
@@ -90,7 +123,7 @@ namespace DAL
                     .HasColumnName("password");
             });
 
-            OnModelCreatingPartial(modelBuilder);
+            this.OnModelCreatingPartial(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

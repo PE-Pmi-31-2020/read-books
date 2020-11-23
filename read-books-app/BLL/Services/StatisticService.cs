@@ -60,11 +60,11 @@ namespace BLL.Services
         {
             var bookMapper = new MapperConfiguration(cfg => cfg.CreateMap<Book, BookDTO>())
                 .CreateMapper();
-            List<BookDTO> allBooks = bookMapper.Map<IEnumerable<Book>, List<BookDTO>>(DataBase.Books.GetAll());
+            List<BookDTO> allBooks = bookMapper.Map<IEnumerable<Book>, List<BookDTO>>(this.DataBase.Books.GetAll());
 
             var statisticMapper = new MapperConfiguration(cfg => cfg.CreateMap<Statistic, StatisticDTO>())
                 .CreateMapper();
-            List<StatisticDTO> allStatistic = statisticMapper.Map<IEnumerable<Statistic>, List<StatisticDTO>>(DataBase.Statistics.GetAll());
+            List<StatisticDTO> allStatistic = statisticMapper.Map<IEnumerable<Statistic>, List<StatisticDTO>>(this.DataBase.Statistics.GetAll());
 
             List<BookDTO> booksToRead = new List<BookDTO>();
             foreach (var book in allBooks)
@@ -90,11 +90,11 @@ namespace BLL.Services
         {
             var bookMapper = new MapperConfiguration(cfg => cfg.CreateMap<Book, BookDTO>())
                 .CreateMapper();
-            List<BookDTO> allBooks = bookMapper.Map<IEnumerable<Book>, List<BookDTO>>(DataBase.Books.GetAll());
+            List<BookDTO> allBooks = bookMapper.Map<IEnumerable<Book>, List<BookDTO>>(this.DataBase.Books.GetAll());
 
             var statisticMapper = new MapperConfiguration(cfg => cfg.CreateMap<Statistic, StatisticDTO>())
                 .CreateMapper();
-            List<StatisticDTO> allStatistic = statisticMapper.Map<IEnumerable<Statistic>, List<StatisticDTO>>(DataBase.Statistics.GetAll());
+            List<StatisticDTO> allStatistic = statisticMapper.Map<IEnumerable<Statistic>, List<StatisticDTO>>(this.DataBase.Statistics.GetAll());
 
             List<BookDTO> readedBooks = new List<BookDTO>();
             foreach (var book in allBooks)
