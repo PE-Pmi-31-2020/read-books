@@ -52,7 +52,7 @@ namespace DAL
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=read-books-db;Username=postgres;Password=joanne19!");
+                optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=read-books-db;Username=postgres;Password=***");
             }
         }
 

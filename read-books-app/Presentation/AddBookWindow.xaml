@@ -33,8 +33,8 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <ListBox x:Name="PlannedList" Margin="30,0,546,39" Width="224" Height="453" VerticalAlignment="Bottom" />
-        <ListBox x:Name="ReadBooksList" Margin="533,0,43,39" Width="224" Height="453" VerticalAlignment="Bottom" />
+        <ListBox x:Name="PlannedList" Margin="30,0,546,39" Width="224" Height="453" VerticalAlignment="Bottom" SelectionChanged="PlannedList_Selected"/>
+        <ListBox x:Name="ReadBooksList" Margin="533,0,43,39" Width="224" Height="453" VerticalAlignment="Bottom" SelectionChanged="ReadBooksList_Selected"/>
 
         <Label Content="Книжки, які планую прочитати" HorizontalAlignment="Left" Margin="22,38,0,0" VerticalAlignment="Top" Width="240" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="#FF9C9C9C" HorizontalContentAlignment="Center"/>
         <Label Content="Книжки, які прочитав" HorizontalAlignment="Left" Margin="529,38,0,0" VerticalAlignment="Top" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="#FF9C9C9C" Width="232" HorizontalContentAlignment="Center"/>
@@ -49,7 +49,7 @@
         <Label x:Name="PagesLabel" Content="Кількість сторінок" HorizontalAlignment="Left" Margin="295,365,0,0" VerticalAlignment="Top" FontFamily="Arial Nova Cond" FontSize="14" />
         <Label x:Name="AllLabel" Content="Всього" HorizontalAlignment="Left" Margin="417,396,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial Nova Cond" />
         <TextBox x:Name="AllTextBox" HorizontalAlignment="Left" Margin="417,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="29" />
-        <Button x:Name="SaveButton" Content="Зберегти" HorizontalAlignment="Left" Margin="295,468,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF9C9C9C" FontFamily="Arial Nova Cond" FontSize="14" />
+        <Button x:Name="SaveButton" Content="Зберегти" HorizontalAlignment="Left" Margin="295,468,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF9C9C9C" FontFamily="Arial Nova Cond" FontSize="14" Click="SaveButton_Click" />
         <Button x:Name="DeleteButton" Content="Видалити" HorizontalAlignment="Left" Margin="401,468,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF9C9C9C" FontSize="14" FontFamily="Arial Nova Cond" />
         <Button x:Name="AddButton" Content="Додати книгу" HorizontalAlignment="Left" Margin="294,510,0,0" VerticalAlignment="Top" Width="207" Height="29" Click="AddButton_Click" Background="#FF9C9C9C" Cursor="Hand" FontSize="14" FontFamily="Arial Nova Cond" />
 

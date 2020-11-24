@@ -6,6 +6,7 @@ namespace BLL.Services
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
     using AutoMapper;
     using BLL.DataTransferObjects;
@@ -39,7 +40,7 @@ namespace BLL.Services
         {
             User user = this.DataBase.Users.Get(userDTO.Id);
             this.CreateBook(bookDTO);
-            Book book = this.DataBase.Books.Get(bookDTO.Id);
+            Book book = this.DataBase.Books.Get(this.GetBookId(bookDTO));
             Statistic statistic = new Statistic
             {
                 UserId = user.Id,
@@ -48,6 +49,21 @@ namespace BLL.Services
                 Review = review,
             };
             this.DataBase.Statistics.Create(statistic);
+            this.DataBase.Save();
+        }
+
+        public void UpdateStatistic(BookDTO bookDTO, UserDTO userDTO, int readedPages, string review, string bookNameToLookFor)
+        {
+            User user = this.DataBase.Users.Get(this.GetUserId(userDTO));
+            Book bookToReplace = this.DataBase.Books.Get(this.GetBookId(bookNameToLookFor));
+            Statistic statistic = this.DataBase.Statistics.Get(this.GetStatisticId(user.Id, bookToReplace.Id));
+            bookToReplace.Name = bookDTO.Name;
+            bookToReplace.Author = bookDTO.Author;
+            bookToReplace.Pages = bookDTO.Pages;
+            this.DataBase.Save();
+            statistic.Book = bookToReplace;
+            statistic.ReadedPages = readedPages;
+            statistic.Review = review;
             this.DataBase.Save();
         }
 
@@ -109,6 +125,38 @@ namespace BLL.Services
             }
 
             return readedBooks;
+        }
+
+        private int GetBookId(BookDTO bookDTO)
+        {
+            int bookId = this.DataBase.Books
+                .Find(b => b.Author == bookDTO.Author
+                && b.Name == bookDTO.Name
+                && b.Pages == bookDTO.Pages).First().Id;
+            return bookId;
+        }
+
+        private int GetBookId(string bookName)
+        {
+            int bookId = this.DataBase.Books
+                .Find(b => b.Name == bookName).First().Id;
+            return bookId;
+        }
+
+        private int GetUserId(UserDTO userDTO)
+        {
+            int userId = this.DataBase.Users
+                .Find(u => u.Email == userDTO.Email
+                && u.Password == userDTO.Password).First().Id;
+            return userId;
+        }
+
+        private int GetStatisticId(int userId, int bookId)
+        {
+            int statisticId = this.DataBase.Statistics
+                .Find(s => s.BookId == bookId
+                && s.UserId == userId).First().Id;
+            return statisticId;
         }
 
         private void CreateBook(BookDTO bookDTO)

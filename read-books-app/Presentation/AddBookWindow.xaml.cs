@@ -29,8 +29,7 @@ namespace Presentation
     public partial class AddBookWindow : Window
     {
         private IStatisticService service = new StatisticService();
-        private Book modelBook = new Book();
-        private Statistic modelStatistic = new Statistic();
+        private string currentlySelectedBookName = "";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AddBookWindow"/> class.
@@ -39,8 +38,8 @@ namespace Presentation
         {
             this.InitializeComponent();
             this.Loaded += this.MainWindow_Loaded;
-            List<BookDTO> book_list = this.service.GetBooksToRead(27).ToList();
-            List<BookDTO> read_book_list = this.service.GetReadedBooks(27).ToList();
+            List<BookDTO> book_list = this.service.GetBooksToRead(1).ToList();
+            List<BookDTO> read_book_list = this.service.GetReadedBooks(1).ToList();
 
             foreach (var p in book_list)
             {
@@ -51,6 +50,16 @@ namespace Presentation
             {
                 this.ReadBooksList.Items.Add(p.Name.ToString());
             }
+        }
+
+        private void PlannedList_Selected(object sender, RoutedEventArgs e)
+        {
+            this.currentlySelectedBookName = this.PlannedList.SelectedItem.ToString();
+        }
+
+        private void ReadBooksList_Selected(object sender, RoutedEventArgs e)
+        {
+            this.currentlySelectedBookName = this.ReadBooksList.SelectedItem.ToString();
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -101,18 +110,19 @@ namespace Presentation
             try
             {
                 this.Validate();
-
-                this.modelBook.Name = this.NameTextBox.Text;
-                this.modelBook.Author = this.AuthorTextBox.Text;
-                this.modelBook.Pages = Convert.ToInt32(this.AllTextBox.Text);
-                this.modelStatistic.ReadedPages = Convert.ToInt32(this.ReadTextBox.Text);
-                this.modelStatistic.Review = this.ReviewTextBox.Text;
-
-                using (ReadBooksContext db = new ReadBooksContext())
+                BookDTO book = new BookDTO
                 {
-                    db.Books.Add(this.modelBook);
-                    db.SaveChanges();
-                }
+                    Name = this.NameTextBox.Text,
+                    Author = this.AuthorTextBox.Text,
+                    Pages = Convert.ToInt32(this.AllTextBox.Text)
+                };
+                UserDTO user = new UserDTO
+                {
+                    Email = "emma23@gmail.com",
+                    Id = 1,
+                    Password = "JWwiKVdNPns1"
+                };
+                service.CreateStatistic(book, user, Convert.ToInt32(this.ReadTextBox.Text), this.ReviewTextBox.Text);
 
                 MainWindow window = new MainWindow();
                 window.Show();
@@ -147,6 +157,35 @@ namespace Presentation
             {
                 throw new FormatException(
                     "Error! The number of pages read is less than the total number of pages!");
+            }
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                BookDTO book = new BookDTO
+                {
+                    Name = this.NameTextBox.Text,
+                    Author = this.AuthorTextBox.Text,
+                    Pages = Convert.ToInt32(this.AllTextBox.Text)
+                };
+                UserDTO user = new UserDTO
+                {
+                    Email = "emma23@gmail.com",
+                    Id = 1,
+                    Password = "JWwiKVdNPns1"
+                };
+                service.UpdateStatistic(book, user, Convert.ToInt32(this.ReadTextBox.Text), this.ReviewTextBox.Text, this.currentlySelectedBookName);
+
+                MainWindow window = new MainWindow();
+                window.Show();
+                this.Close();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
