@@ -50,7 +50,7 @@
         <Label x:Name="AllLabel" Content="Всього" HorizontalAlignment="Left" Margin="417,396,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial Nova Cond" />
         <TextBox x:Name="AllTextBox" HorizontalAlignment="Left" Margin="417,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="29" />
         <Button x:Name="SaveButton" Content="Зберегти" HorizontalAlignment="Left" Margin="295,468,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF9C9C9C" FontFamily="Arial Nova Cond" FontSize="14" Click="SaveButton_Click" />
-        <Button x:Name="DeleteButton" Content="Видалити" HorizontalAlignment="Left" Margin="401,468,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF9C9C9C" FontSize="14" FontFamily="Arial Nova Cond" />
+        <Button x:Name="DeleteButton" Content="Видалити" HorizontalAlignment="Left" Margin="401,468,0,0" VerticalAlignment="Top" Width="101" Height="29" Cursor="Hand" Background="#FF9C9C9C" FontSize="14" FontFamily="Arial Nova Cond" Click="DeleteButton_Click" />
         <Button x:Name="AddButton" Content="Додати книгу" HorizontalAlignment="Left" Margin="294,510,0,0" VerticalAlignment="Top" Width="207" Height="29" Click="AddButton_Click" Background="#FF9C9C9C" Cursor="Hand" FontSize="14" FontFamily="Arial Nova Cond" />
 
 

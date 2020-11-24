@@ -41,6 +41,7 @@ namespace BLL.Interfaces
         /// Dispose.
         /// </summary>
         void Dispose();
+        void DeleteStatistic(UserDTO userDTO, string bookNameToLookFor);
         void UpdateStatistic(BookDTO bookDTO, UserDTO userDTO, int readedPages, string review, string bookNameToLookFor);
     }
 }

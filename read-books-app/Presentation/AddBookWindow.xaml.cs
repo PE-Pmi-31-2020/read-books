@@ -188,5 +188,27 @@ namespace Presentation
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                UserDTO user = new UserDTO
+                {
+                    Email = "emma23@gmail.com",
+                    Id = 1,
+                    Password = "JWwiKVdNPns1"
+                };
+                service.DeleteStatistic(user, this.currentlySelectedBookName);
+
+                MainWindow window = new MainWindow();
+                window.Show();
+                this.Close();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

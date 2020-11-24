@@ -52,6 +52,16 @@ namespace BLL.Services
             this.DataBase.Save();
         }
 
+        public void DeleteStatistic(UserDTO userDTO, string bookNameToLookFor)
+        {
+            User user = this.DataBase.Users.Get(this.GetUserId(userDTO));
+            Book bookToDelete = this.DataBase.Books.Get(this.GetBookId(bookNameToLookFor));
+            Statistic statistic = this.DataBase.Statistics.Get(this.GetStatisticId(user.Id, bookToDelete.Id));
+            this.DataBase.Statistics.Delete(statistic.Id);
+            this.DataBase.Books.Delete(bookToDelete.Id);
+            this.DataBase.Save();
+        }
+
         public void UpdateStatistic(BookDTO bookDTO, UserDTO userDTO, int readedPages, string review, string bookNameToLookFor)
         {
             User user = this.DataBase.Users.Get(this.GetUserId(userDTO));
