@@ -7,18 +7,9 @@ namespace Presentation
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using System.Windows;
     using System.Windows.Controls;
-    using System.Windows.Data;
-    using System.Windows.Documents;
-    using System.Windows.Input;
     using System.Windows.Interop;
-    using System.Windows.Media;
-    using System.Windows.Media.Imaging;
-    using System.Windows.Navigation;
-    using System.Windows.Shapes;
     using BLL.DataTransferObjects;
     using BLL.Interfaces;
     using BLL.Services;
@@ -99,6 +90,36 @@ namespace Presentation
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();
             this.Close();
+        }
+
+        private void FindButton_Click(object sender, RoutedEventArgs e)
+        {
+            List<BookDTO> book_list = this.service.GetBooksToRead(1).ToList();
+            List<BookDTO> read_book_list = this.service.GetReadedBooks(1).ToList();
+
+            for (int i=0; i<this.PlannedListBox.Items.Count; i++)
+            {
+                if (FindTextBox.Text != this.PlannedListBox.Items[i] || FindTextBox.Text != this.ReadListBox.Items[i])
+                {
+                    MessageBox.Show("Такої книги не має в базі, спробуйте іншу назву");
+                }
+                    else if (FindTextBox.Text == this.PlannedListBox.Items[i] || FindTextBox.Text == this.ReadListBox.Items[i])
+                {
+                    AddBookWindow addBookWindow = new AddBookWindow();
+                    addBookWindow.Show();
+                    this.Close();
+                    foreach (var p in book_list)
+                    {
+                        if(FindTextBox.Text == p.Name.ToString())
+                        {
+                            addBookWindow.NameTextBox.Text = p.Name.ToString();
+                            addBookWindow.AuthorTextBox.Text = p.Author.ToString();
+                            addBookWindow.AllTextBox.Text = p.Pages.ToString();
+                        }
+                    }
+
+                }
+            }
         }
     }
 }
