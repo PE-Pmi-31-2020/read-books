@@ -21,6 +21,8 @@ namespace BLL.Interfaces
         /// <param name="review">book review.</param>
         void CreateStatistic(BookDTO bookDTO, UserDTO userDTO, int readedPages, string review);
 
+        void CreateUser(UserDTO userDTO);
+
         /// <summary>
         /// Get Readed Books method.
         /// </summary>
@@ -33,7 +35,7 @@ namespace BLL.Interfaces
         /// </summary>
         /// <param name="userId">user id.</param>
         /// <returns>books to read.</returns>
-        List<StatisticDTO> GetStatistic(int userId);
+       // List<StatisticDTO> GetStatistic(int userId, int bookId);
 
         /// <summary>
         /// Get Books To Read method.

@@ -95,7 +95,7 @@ namespace Presentation
         private void FindButton_Click(object sender, RoutedEventArgs e)
         {
             List<BookDTO> book_list = this.service.GetBooksToRead(1).ToList();
-            List<StatisticDTO> read_book_statistic = this.service.GetStatistic(1).ToList();
+           // List<StatisticDTO> read_book_statistic = this.service.GetStatistic(1).ToList();
 
             for (int i=0; i<this.PlannedListBox.Items.Count; i++)
             {
@@ -112,11 +112,11 @@ namespace Presentation
                             addBookWindow.NameTextBox.Text = p.Name.ToString();
                             addBookWindow.AuthorTextBox.Text = p.Author.ToString();
                             addBookWindow.AllTextBox.Text = p.Pages.ToString();
-                            foreach (var k in read_book_statistic)
-                            {
-                                addBookWindow.ReadTextBox.Text = k.ReadedPages.ToString();
-                                addBookWindow.ReviewTextBox.Text = k.Review.ToString();
-                            }
+                            //foreach (var k in read_book_statistic)
+                            //{
+                            //    addBookWindow.ReadTextBox.Text = k.ReadedPages.ToString();
+                            //    addBookWindow.ReviewTextBox.Text = k.Review.ToString();
+                            //}
                         }
                     }
                    

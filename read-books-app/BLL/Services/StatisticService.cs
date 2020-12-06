@@ -52,6 +52,17 @@ namespace BLL.Services
             this.DataBase.Save();
         }
 
+        public void CreateUser(UserDTO userDTO)
+        {
+            User user = new User
+            {
+                Email = userDTO.Email,
+                Password = userDTO.Password
+            };
+            this.DataBase.Users.Create(user);
+            this.DataBase.Save();
+        }
+
         public void DeleteStatistic(UserDTO userDTO, string bookNameToLookFor)
         {
             User user = this.DataBase.Users.Get(this.GetUserId(userDTO));
@@ -180,5 +191,6 @@ namespace BLL.Services
             this.DataBase.Books.Create(book);
             this.DataBase.Save();
         }
+
     }
 }

@@ -2,6 +2,11 @@
 // Copyright (c) BakuninCompany. All rights reserved.
 // </copyright>
 
+using BLL.DataTransferObjects;
+using BLL.Interfaces;
+using BLL.Services;
+using DAL;
+
 namespace Presentation
 {
     using System;
@@ -24,6 +29,9 @@ namespace Presentation
         /// <summary>
         /// Initializes a new instance of the <see cref="RegisterWindow"/> class.
         /// </summary>
+         
+        private IStatisticService service = new StatisticService();
+
         public RegisterWindow()
         {
             this.InitializeComponent();
@@ -33,6 +41,12 @@ namespace Presentation
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
+            UserDTO user = new UserDTO
+            {
+                Email = emailTextBox.Text,
+                Password = passwordTextBox.Password
+            };
+            service.CreateUser(user);
             this.Close();
         }
 
