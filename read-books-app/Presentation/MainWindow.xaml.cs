@@ -95,36 +95,37 @@ namespace Presentation
         private void FindButton_Click(object sender, RoutedEventArgs e)
         {
             List<BookDTO> book_list = this.service.GetBooksToRead(1).ToList();
-           // List<StatisticDTO> read_book_statistic = this.service.GetStatistic(1).ToList();
+            // List<StatisticDTO> read_book_statistic = this.service.GetStatisticAll(1).ToList();
 
-            for (int i=0; i<this.PlannedListBox.Items.Count; i++)
+            for (int i = 0; i < this.PlannedListBox.Items.Count; i++)
             {
-               
-             if (FindTextBox.Text == this.PlannedListBox.Items[i].ToString() || FindTextBox.Text == this.ReadListBox.Items[i].ToString())
-             {
+
+                if (FindTextBox.Text == this.PlannedListBox.Items[i].ToString() || FindTextBox.Text == this.ReadListBox.Items[i].ToString())
+                {
                     AddBookWindow addBookWindow = new AddBookWindow();
                     addBookWindow.Show();
                     this.Close();
                     foreach (var p in book_list)
                     {
-                        if(FindTextBox.Text == p.Name.ToString())
+                        List<StatisticDTO> read_book_statistic = this.service.GetStatisticAll(1, p.Id).ToList();
+                        if (FindTextBox.Text == p.Name.ToString())
                         {
                             addBookWindow.NameTextBox.Text = p.Name.ToString();
                             addBookWindow.AuthorTextBox.Text = p.Author.ToString();
                             addBookWindow.AllTextBox.Text = p.Pages.ToString();
-                            //foreach (var k in read_book_statistic)
-                            //{
-                            //    addBookWindow.ReadTextBox.Text = k.ReadedPages.ToString();
-                            //    addBookWindow.ReviewTextBox.Text = k.Review.ToString();
-                            //}
+                            foreach (var k in read_book_statistic)
+                            {
+                                addBookWindow.ReadTextBox.Text = k.ReadedPages.ToString();
+                                addBookWindow.ReviewTextBox.Text = k.Review.ToString();
+                            }
                         }
                     }
-                   
-             }
-               else if (FindTextBox.Text != this.PlannedListBox.Items[i].ToString() || FindTextBox.Text != this.ReadListBox.Items[i].ToString())
-               {
+
+                }
+                else if (FindTextBox.Text != this.PlannedListBox.Items[i].ToString() || FindTextBox.Text != this.ReadListBox.Items[i].ToString())
+                {
                     MessageBox.Show("Такої книги не має в базі, спробуйте іншу назву");
-               }
+                }
             }
         }
     }
