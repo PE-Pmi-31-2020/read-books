@@ -4,9 +4,7 @@
 
 namespace BLL.Interfaces
 {
-    using System;
     using System.Collections.Generic;
-    using System.Text;
     using BLL.DataTransferObjects;
 
     /// <summary>
@@ -35,6 +33,14 @@ namespace BLL.Interfaces
         /// </summary>
         /// <param name="userId">user id.</param>
         /// <returns>books to read.</returns>
+        List<StatisticDTO> GetStatistic(int userId);
+
+        /// <summary>
+        /// Get Books To Read method.
+        /// </summary>
+        /// <param name="review">book review.</param>
+        /// <param name="readedPages">number of pages.</param>
+        /// <returns>get statistic.</returns>
         List<BookDTO> GetBooksToRead(int userId);
 
         /// <summary>
