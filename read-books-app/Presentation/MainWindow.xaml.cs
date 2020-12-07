@@ -9,10 +9,13 @@ namespace Presentation
     using System.Linq;
     using System.Windows;
     using System.Windows.Controls;
+    using System.Windows.Data;
     using System.Windows.Interop;
     using BLL.DataTransferObjects;
     using BLL.Interfaces;
     using BLL.Services;
+    using LiveCharts;
+    using LiveCharts.Wpf;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml.
@@ -20,6 +23,9 @@ namespace Presentation
     public partial class MainWindow : Window
     {
         private IStatisticService service = new StatisticService();
+        public SeriesCollection SCollection { get; set; }
+        public string[] Labels { get; set; }
+        public Func<double, string> YFormatter { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
@@ -30,7 +36,19 @@ namespace Presentation
             this.Loaded += this.MainWindow_Loaded;
             List<BookDTO> book_list = this.service.GetBooksToRead(1).ToList();
             List<BookDTO> read_book_list = this.service.GetReadedBooks(1).ToList();
-
+            ChartValues<int> readedPages = new ChartValues<int> { 4, 6, 5, 2, 4, 8, 10, 1, 2 };
+            SCollection = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "Readed Books",
+                    Values = readedPages,
+                    PointGeometry = null
+                }
+            };
+            string[] days = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
+            Labels = days;
+            YFormatter = value => value.ToString();
             foreach (var p in book_list)
             {
                 this.PlannedListBox.Items.Add(p.Name.ToString());
@@ -40,6 +58,7 @@ namespace Presentation
             {
                 this.ReadListBox.Items.Add(p.Name.ToString());
             }
+            this.DataContext = this;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
