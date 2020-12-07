@@ -33,7 +33,7 @@ namespace UnitTests
             IStatisticService serv = new StatisticService();
             List<BookDTO> books = serv.GetBooksToRead(1).ToList();
             int len = books.Count;
-            int expected = 0;
+            int expected = 1;
 
 
             Assert.AreNotEqual(expected, len);
@@ -45,9 +45,9 @@ namespace UnitTests
         public void GetReadedBooksTestMethod()
         {
             IStatisticService serv = new StatisticService();
-            List<BookDTO> books = serv.GetReadedBooks(1).ToList();
+            List<BookDTO> books = serv.GetReadedBooks(18).ToList();
             int len = books.Count;
-            int expected = 0;
+            int expected = 1;
 
 
             Assert.AreEqual(expected, len);

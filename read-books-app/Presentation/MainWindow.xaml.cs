@@ -34,8 +34,8 @@ namespace Presentation
         {
             this.InitializeComponent();
             this.Loaded += this.MainWindow_Loaded;
-            List<BookDTO> book_list = this.service.GetBooksToRead(1).ToList();
-            List<BookDTO> read_book_list = this.service.GetReadedBooks(1).ToList();
+            List<BookDTO> book_list = this.service.GetBooksToRead(18).ToList();
+            List<BookDTO> read_book_list = this.service.GetReadedBooks(18).ToList();
             ChartValues<int> readedPages = new ChartValues<int> { 4, 6, 5, 2, 4, 8, 10, 1, 2 };
             SCollection = new SeriesCollection
             {
