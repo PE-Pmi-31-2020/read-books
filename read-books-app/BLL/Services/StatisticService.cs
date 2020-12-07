@@ -14,12 +14,15 @@ namespace BLL.Services
     using DAL;
     using DAL.Interfaces;
     using DAL.Repositories;
+    using NLog;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="StatisticService"/> class.
     /// </summary>
     public class StatisticService : IStatisticService
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Initializes a new instance of the <see cref="StatisticService"/> class.
         /// </summary>
@@ -50,6 +53,7 @@ namespace BLL.Services
             };
             this.DataBase.Statistics.Create(statistic);
             this.DataBase.Save();
+            logger.Info("Statistic created");
         }
 
         public void CreateUser(UserDTO userDTO)
@@ -61,6 +65,8 @@ namespace BLL.Services
             };
             this.DataBase.Users.Create(user);
             this.DataBase.Save();
+
+            logger.Info("User created");
         }
 
         public void DeleteStatistic(UserDTO userDTO, string bookNameToLookFor)
@@ -71,6 +77,8 @@ namespace BLL.Services
             this.DataBase.Statistics.Delete(statistic.Id);
             this.DataBase.Books.Delete(bookToDelete.Id);
             this.DataBase.Save();
+
+            logger.Info("Stat deleted");
         }
 
         public void UpdateStatistic(BookDTO bookDTO, UserDTO userDTO, int readedPages, string review, string bookNameToLookFor)
@@ -86,6 +94,8 @@ namespace BLL.Services
             statistic.ReadedPages = readedPages;
             statistic.Review = review;
             this.DataBase.Save();
+
+            logger.Info("Stat updated");
         }
 
         /// <summary>
@@ -114,6 +124,8 @@ namespace BLL.Services
                     }
                 }
             }
+
+            logger.Info("Got books to read");
 
             return booksToRead;
         }
@@ -145,6 +157,8 @@ namespace BLL.Services
                 }
             }
 
+            logger.Info("Got readed books");
+
             return readedBooks;
         }
         public List<StatisticDTO> GetStatisticAll(int userId, int bookId)
@@ -168,6 +182,8 @@ namespace BLL.Services
                     }
                 }
             }
+
+            logger.Info("Got stat");
             return statistic_all;
 
 
@@ -179,6 +195,7 @@ namespace BLL.Services
                 .Find(b => b.Author == bookDTO.Author
                 && b.Name == bookDTO.Name
                 && b.Pages == bookDTO.Pages).First().Id;
+
             return bookId;
         }
 
@@ -215,6 +232,8 @@ namespace BLL.Services
             };
             this.DataBase.Books.Create(book);
             this.DataBase.Save();
+
+            logger.Info("Book created");
         }
 
     }
