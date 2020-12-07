@@ -20,13 +20,19 @@
 
             </Grid.RowDefinitions>
 
-            <Border Grid.RowSpan="2">
-                <Border.Background>
-                    <LinearGradientBrush>
-                        <GradientStop Color="#F8F9F9" Offset="0.0"/>
-                        <GradientStop Color="#515A5A" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
+            <Border Grid.RowSpan="2" Background="#515A5A">
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="Border.MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation To="#61D9DC" 
+                                    Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
+                                    FillBehavior="Stop" 
+                                    Duration="0:0:2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
             </Border>
 
             <StackPanel VerticalAlignment="Center">
@@ -84,48 +90,34 @@
                     />
 
                 <StackPanel Orientation="Horizontal">
-                    <Button Content="SIGN IN" Width="90" Height="30" Margin="100,50,0,0" FontWeight="Bold" Click="Button_Click" >
-                        <Button.Style>
-                            <Style TargetType="{x:Type Button}">
-                                <Setter Property="Background" Value="Transparent"/>
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type Button}">
-                                            <Border Background="{TemplateBinding Background}">
-                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#D0D3D4"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
+                    <Button Content="SIGN IN" Width="90" Height="30" Margin="100,50,0,0" FontWeight="Bold" Click="Button_Click" Background="#515A5A" >
+                        <Button.Triggers>
+                            <EventTrigger RoutedEvent="Button.MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="#2779F0" 
+                                    Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
+                                    RepeatBehavior="Forever"
+                                    Duration="0:0:1"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>
                     </Button>
-                    
-                    <Button Content="SIGN UP" Width="90" Height="30" Margin="100,50,0,0" FontWeight="Bold" Click="Button_Click_1" >
-                        <Button.Style>
-                            <Style TargetType="{x:Type Button}">
-                                <Setter Property="Background" Value="Transparent"/>
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type Button}">
-                                            <Border Background="{TemplateBinding Background}">
-                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#D0D3D4"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
+
+                    <Button Content="SIGN UP" Width="90" Height="30" Margin="100,50,0,0" FontWeight="Bold" Click="Button_Click_1" Background="#515A5A" >
+                        <Button.Triggers>
+                            <EventTrigger RoutedEvent="Button.MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="#F4F732" 
+                                    Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
+                                    RepeatBehavior="Forever"
+                                    Duration="0:0:1"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>
                     </Button>
                 </StackPanel>
 
