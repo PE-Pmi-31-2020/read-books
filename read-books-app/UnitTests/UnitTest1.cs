@@ -12,7 +12,6 @@ namespace UnitTests
     public class UnitTest1
     {
         [TestMethod]
-
         public void GetBooksTestMethod()
         {
             IStatisticService serv = new StatisticService();
@@ -20,14 +19,11 @@ namespace UnitTests
             int len = books.Count;
             int expected = 3;
 
-
             Assert.AreEqual(expected, len);
-
         }
 
 
         [TestMethod]
-
         public void GetBooksTestMethod2()
         {
             IStatisticService serv = new StatisticService();
@@ -35,13 +31,10 @@ namespace UnitTests
             int len = books.Count;
             int expected = 1;
 
-
             Assert.AreNotEqual(expected, len);
-
         }
 
         [TestMethod]
-
         public void GetReadedBooksTestMethod()
         {
             IStatisticService serv = new StatisticService();
@@ -49,13 +42,10 @@ namespace UnitTests
             int len = books.Count;
             int expected = 1;
 
-
             Assert.AreEqual(expected, len);
-
         }
 
         [TestMethod]
-
         public void GetReadedBooksTestMethod2()
         {
             IStatisticService serv = new StatisticService();
@@ -63,9 +53,7 @@ namespace UnitTests
             int len = books.Count;
             int expected = 3;
 
-
             Assert.AreNotEqual(expected, len);
-
         }
 
     }

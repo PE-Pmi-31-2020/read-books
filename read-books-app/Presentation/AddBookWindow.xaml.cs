@@ -38,8 +38,8 @@ namespace Presentation
         {
             this.InitializeComponent();
             this.Loaded += this.MainWindow_Loaded;
-            List<BookDTO> book_list = this.service.GetBooksToRead(1).ToList();
-            List<BookDTO> read_book_list = this.service.GetReadedBooks(1).ToList();
+            List<BookDTO> book_list = this.service.GetBooksToRead(18).ToList();
+            List<BookDTO> read_book_list = this.service.GetReadedBooks(18).ToList();
 
             foreach (var p in book_list)
             {

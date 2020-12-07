@@ -161,6 +161,8 @@ namespace BLL.Services
 
             return readedBooks;
         }
+
+        /// <inheritdoc/>
         public List<StatisticDTO> GetStatisticAll(int userId, int bookId)
         {
             var bookMapper = new MapperConfiguration(cfg => cfg.CreateMap<Book, BookDTO>())
