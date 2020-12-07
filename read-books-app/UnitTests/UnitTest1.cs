@@ -39,5 +39,34 @@ namespace UnitTests
             Assert.AreNotEqual(expected, len);
 
         }
+
+        [TestMethod]
+
+        public void GetReadedBooksTestMethod()
+        {
+            IStatisticService serv = new StatisticService();
+            List<BookDTO> books = serv.GetReadedBooks(1).ToList();
+            int len = books.Count;
+            int expected = 0;
+
+
+            Assert.AreEqual(expected, len);
+
+        }
+
+        [TestMethod]
+
+        public void GetReadedBooksTestMethod2()
+        {
+            IStatisticService serv = new StatisticService();
+            List<BookDTO> books = serv.GetReadedBooks(1).ToList();
+            int len = books.Count;
+            int expected = 3;
+
+
+            Assert.AreNotEqual(expected, len);
+
+        }
+
     }
 }
