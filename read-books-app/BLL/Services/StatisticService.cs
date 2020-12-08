@@ -157,7 +157,7 @@ namespace BLL.Services
                 }
             }
 
-            logger.Info("Got readed books");
+            logger.Info("Got read books");
 
             return readedBooks;
         }

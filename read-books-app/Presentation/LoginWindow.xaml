@@ -97,8 +97,8 @@
                                     <Storyboard>
                                         <ColorAnimation To="#2779F0" 
                                     Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
-                                    RepeatBehavior="Forever"
-                                    Duration="0:0:1"/>
+                                    FillBehavior="Stop" 
+                                    Duration="0:0:2"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
@@ -110,10 +110,10 @@
                             <EventTrigger RoutedEvent="Button.MouseEnter">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="#F4F732" 
+                                        <ColorAnimation To="#2779F0" 
                                     Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
-                                    RepeatBehavior="Forever"
-                                    Duration="0:0:1"/>
+                                    FillBehavior="Stop" 
+                                    Duration="0:0:2"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
