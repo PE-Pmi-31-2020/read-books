@@ -111,40 +111,36 @@ namespace Presentation
             this.Close();
         }
 
-        private void FindButton_Click(object sender, RoutedEventArgs e)
+        
+
+        private void FindBookButton_Click(object sender, RoutedEventArgs e)
         {
             List<BookDTO> book_list = this.service.GetBooksToRead(1).ToList();
-            // List<StatisticDTO> read_book_statistic = this.service.GetStatisticAll(1).ToList();
+            List<BookDTO> read_book_list = this.service.GetReadedBooks(1).ToList();
 
             for (int i = 0; i < this.PlannedListBox.Items.Count; i++)
             {
-
-                if (FindTextBox.Text == this.PlannedListBox.Items[i].ToString() || FindTextBox.Text == this.ReadListBox.Items[i].ToString())
+                if (FindTextBox.Text == this.PlannedListBox.Items[i] || FindTextBox.Text == this.ReadListBox.Items[i])
                 {
                     AddBookWindow addBookWindow = new AddBookWindow();
                     addBookWindow.Show();
                     this.Close();
                     foreach (var p in book_list)
                     {
-                        List<StatisticDTO> read_book_statistic = this.service.GetStatisticAll(1, p.Id).ToList();
                         if (FindTextBox.Text == p.Name.ToString())
                         {
                             addBookWindow.NameTextBox.Text = p.Name.ToString();
                             addBookWindow.AuthorTextBox.Text = p.Author.ToString();
                             addBookWindow.AllTextBox.Text = p.Pages.ToString();
-                            foreach (var k in read_book_statistic)
-                            {
-                                addBookWindow.ReadTextBox.Text = k.ReadedPages.ToString();
-                                addBookWindow.ReviewTextBox.Text = k.Review.ToString();
-                            }
                         }
                     }
 
                 }
-                else if (FindTextBox.Text != this.PlannedListBox.Items[i].ToString() || FindTextBox.Text != this.ReadListBox.Items[i].ToString())
+                else if (FindTextBox.Text != this.PlannedListBox.Items[i] || FindTextBox.Text != this.ReadListBox.Items[i])
                 {
                     MessageBox.Show("Такої книги не має в базі, спробуйте іншу назву");
                 }
+                
             }
         }
     }

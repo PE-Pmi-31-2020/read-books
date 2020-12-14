@@ -163,33 +163,7 @@ namespace BLL.Services
         }
 
         /// <inheritdoc/>
-        public List<StatisticDTO> GetStatisticAll(int userId, int bookId)
-        {
-            var bookMapper = new MapperConfiguration(cfg => cfg.CreateMap<Book, BookDTO>())
-                .CreateMapper();
-            List<BookDTO> allBooks = bookMapper.Map<IEnumerable<Book>, List<BookDTO>>(this.DataBase.Books.GetAll());
-
-            var statisticMapper = new MapperConfiguration(cfg => cfg.CreateMap<Statistic, StatisticDTO>())
-                .CreateMapper();
-            List<StatisticDTO> allStatistic = statisticMapper.Map<IEnumerable<Statistic>, List<StatisticDTO>>(this.DataBase.Statistics.GetAll());
-
-            List<StatisticDTO> statistic_all = new List<StatisticDTO>();
-            foreach (var book in allBooks)
-            {
-                foreach (var statistic in allStatistic)
-                {
-                    if (book.Id == statistic.BookId && statistic.UserId == userId)
-                    {
-                        statistic_all.Add(statistic);
-                    }
-                }
-            }
-
-            logger.Info("Got stat");
-            return statistic_all;
-
-
-        }
+      
 
         private int GetBookId(BookDTO bookDTO)
         {

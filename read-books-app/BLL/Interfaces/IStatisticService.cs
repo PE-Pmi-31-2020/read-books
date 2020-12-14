@@ -29,14 +29,7 @@ namespace BLL.Interfaces
         /// <param name="userId">user id.</param>
         /// <returns>readed books.</returns>
         
-        List<StatisticDTO> GetStatisticAll(int userId, int bookId);
-
-        /// <summary>
-        /// Get Books To Read method.
-        /// </summary>
-        /// <param name="userId">user id.</param>
-        /// <param name="bookId">book id.</param>
-        /// <returns>readedPages.</returns>
+    
         List<BookDTO> GetReadedBooks(int userId);
 
         /// <summary>
