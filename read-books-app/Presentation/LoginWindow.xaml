@@ -90,7 +90,7 @@
                     />
 
                 <StackPanel Orientation="Horizontal">
-                    <Button Content="SIGN IN" Width="90" Height="30" Margin="100,50,0,0" FontWeight="Bold" Click="Button_Click" Background="#515A5A" >
+                    <Button Content="SIGN IN" Width="90" Height="30" Margin="100,50,0,0" FontWeight="Bold" Click="Button_Click" Background="#515A5A" Cursor="Hand" >
                         <Button.Triggers>
                             <EventTrigger RoutedEvent="Button.MouseEnter">
                                 <BeginStoryboard>
@@ -105,7 +105,7 @@
                         </Button.Triggers>
                     </Button>
 
-                    <Button Content="SIGN UP" Width="90" Height="30" Margin="100,50,0,0" FontWeight="Bold" Click="Button_Click_1" Background="#515A5A" >
+                    <Button Content="SIGN UP" Width="90" Height="30" Margin="100,50,0,0" FontWeight="Bold" Click="Button_Click_1" Background="#515A5A" Cursor="Hand" >
                         <Button.Triggers>
                             <EventTrigger RoutedEvent="Button.MouseEnter">
                                 <BeginStoryboard>

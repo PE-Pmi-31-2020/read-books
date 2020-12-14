@@ -34,7 +34,7 @@
         <TextBox x:Name="MinuteTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="124,275,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Height="22" PreviewTextInput ="MinuteTextBox_PreviewTextInput" />
         <Button x:Name="SubClockButton" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="191,296,0,0" VerticalAlignment="Top" Height="18" Width="17" Click="SubClockButton_Click" Background="#FF716A76"/>
 
-        <Button Content="Зберегти зміни" Grid.Column="1" HorizontalAlignment="Left" Margin="55,314,0,0" VerticalAlignment="Top" Background="#FF716A76"/>
+        <Button Content="Зберегти зміни" Grid.Column="1" HorizontalAlignment="Left" Margin="55,314,0,0" VerticalAlignment="Top" Background="#FF716A76" Click="Button_Click_2" Cursor="Hand" />
         
     </Grid>
 </Window>
