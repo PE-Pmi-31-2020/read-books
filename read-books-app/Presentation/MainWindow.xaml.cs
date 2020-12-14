@@ -36,17 +36,17 @@ namespace Presentation
             this.Loaded += this.MainWindow_Loaded;
             List<BookDTO> book_list = this.service.GetBooksToRead(18).ToList();
             List<BookDTO> read_book_list = this.service.GetReadedBooks(18).ToList();
-            ChartValues<int> readedPages = new ChartValues<int> { 4, 6, 5, 2, 4, 8, 10, 1, 2 };
+            ChartValues<int> readedPages = new ChartValues<int> { 30, 20, 35, 10, 50, 43, 25};
             SCollection = new SeriesCollection
             {
                 new LineSeries
                 {
-                    Title = "Readed Books",
+                    Title = "Кiлькiсть прочитаних сторiнок",
                     Values = readedPages,
                     PointGeometry = null
                 }
             };
-            string[] days = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
+            string[] days = new[] { "Понедiлок", "Вiвторок", "Середа", "Четвер", "П'ятниця", "Субота", "Недiля"};
             Labels = days;
             YFormatter = value => value.ToString();
             foreach (var p in book_list)
