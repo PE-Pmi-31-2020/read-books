@@ -2,6 +2,8 @@
 // Copyright (c) BakuninCompany. All rights reserved.
 // </copyright>
 
+using System.Threading;
+
 namespace Presentation
 {
     using System;
@@ -24,6 +26,8 @@ namespace Presentation
         /// <summary>
         /// Initializes a new instance of the <see cref="SettingsWindow"/> class.
         /// </summary>
+        public static int Hour { get; private set; }
+        public static int Minute { get; private set; }
         public SettingsWindow()
         {
             this.InitializeComponent();
@@ -83,6 +87,30 @@ namespace Presentation
         private void HourTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = !char.IsDigit(e.Text, 0);
+        }
+
+        public static void Reminder(object obj)
+        {
+            bool flag = true;
+            while (flag)
+            {
+                if ((Hour == System.DateTime.Now.Hour) &&
+                    (Minute == System.DateTime.Now.Minute))
+                {
+                    MessageBox.Show($"You need to read now :)");
+                    flag = false;
+                }
+
+            }
+        }
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Hour = Convert.ToInt32(HourTextBox.Text);
+            Minute = Convert.ToInt32(MinuteTextBox.Text);
+            int num = 0;
+            TimerCallback tm = new TimerCallback(Reminder);
+            Timer timer = new Timer(tm, num, 0, 25000);
+            this.Close();
         }
     }
 }

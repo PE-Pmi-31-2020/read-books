@@ -52,11 +52,12 @@
                 </Button.Effect>
                 <Image Source="Images\plus_sign.png"/>
             </Button>
-            <Button x:Name="FindBookButton"   HorizontalAlignment="Center" VerticalAlignment="Top" Width="110" Click="FindBookButton_Click" Background="#FF716A76" Height="33" Margin="0,124,0,0" Content="Найти"/>
+            <Button x:Name="FindBookButton"   HorizontalAlignment="Center" VerticalAlignment="Top" Width="110" Click="FindBookButton_Click" Background="#FF716A76" Height="33" Margin="0,124,0,0" Content="Найти" Cursor="Hand"/>
             <Label x:Name="AddBookLabel" Content="Додати книгу" HorizontalAlignment="Left" Height="35" Margin="340,267,0,0" VerticalAlignment="Top" Width="110" FlowDirection="LeftToRight" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed"/>
             <Label Content="Графік прочитаних сторінок" HorizontalAlignment="Left" Margin="280,390,0,0" VerticalAlignment="Top" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="Gray"/>
             <TextBox HorizontalAlignment="Left" Margin="294,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="29" Visibility="Collapsed"/>
             <ListBox x:Name="ReadListBox" Margin="518,82,28,58"/>
+            <Label Content="Книжки, які планую прочитати" HorizontalAlignment="Left" Margin="14,38,0,0" VerticalAlignment="Top" FontFamily="Arial Nova Cond" FontSize="20" FontWeight="UltraLight" FontStyle="Normal" FontStretch="ExtraCondensed" Background="#FF9C9C9C" Width="232" HorizontalContentAlignment="Center"/>
         </Grid>
         <Grid Grid.Row="1">
             <lvc:CartesianChart Series="{Binding SCollection}" LegendLocation="Right" >

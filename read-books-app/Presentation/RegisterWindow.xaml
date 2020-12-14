@@ -107,7 +107,7 @@
                     />
 
 
-                <Button Content="SIGN UP" Width="90" Height="30" Margin="0,50,0,0" FontWeight="Bold" Click="Button_Click_1" >
+                <Button Content="SIGN UP" Width="90" Height="30" Margin="0,50,0,0" FontWeight="Bold" Click="Button_Click_1" Cursor="Hand" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="Transparent"/>
