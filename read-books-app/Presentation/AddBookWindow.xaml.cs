@@ -14,6 +14,7 @@ namespace Presentation
     using BLL.DataTransferObjects;
     using BLL.Interfaces;
     using BLL.Services;
+    using Presentation.Classes;
 
     /// <summary>
     /// Interaction logic for AddBookWindow.xaml.
@@ -22,6 +23,7 @@ namespace Presentation
     {
         private IStatisticService service = new StatisticService();
         private string currentlySelectedBookName = "";
+        
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AddBookWindow"/> class.
@@ -30,8 +32,8 @@ namespace Presentation
         {
             this.InitializeComponent();
             this.Loaded += this.MainWindow_Loaded;
-            List<BookDTO> book_list = this.service.GetBooksToRead(1).ToList();
-            List<BookDTO> read_book_list = this.service.GetReadedBooks(1).ToList();
+            List<BookDTO> book_list = this.service.GetBooksToRead(UserHelper.User.Id).ToList();
+            List<BookDTO> read_book_list = this.service.GetReadedBooks(UserHelper.User.Id).ToList();
 
             foreach (var p in book_list)
             {
@@ -108,13 +110,7 @@ namespace Presentation
                     Author = this.AuthorTextBox.Text,
                     Pages = Convert.ToInt32(this.AllTextBox.Text)
                 };
-                UserDTO user = new UserDTO
-                {
-                    Email = "emma23@gmail.com",
-                    Id = 1,
-                    Password = "JWwiKVdNPns1"
-                };
-                service.CreateStatistic(book, user, Convert.ToInt32(this.ReadTextBox.Text), this.ReviewTextBox.Text);
+                service.CreateStatistic(book, UserHelper.User, Convert.ToInt32(this.ReadTextBox.Text), this.ReviewTextBox.Text);
 
                 MainWindow window = new MainWindow();
                 window.Show();
@@ -163,13 +159,7 @@ namespace Presentation
                     Author = this.AuthorTextBox.Text,
                     Pages = Convert.ToInt32(this.AllTextBox.Text)
                 };
-                UserDTO user = new UserDTO
-                {
-                    Email = "emma23@gmail.com",
-                    Id = 1,
-                    Password = "JWwiKVdNPns1"
-                };
-                service.UpdateStatistic(book, user, Convert.ToInt32(this.ReadTextBox.Text), this.ReviewTextBox.Text, this.currentlySelectedBookName);
+                service.UpdateStatistic(book, UserHelper.User, Convert.ToInt32(this.ReadTextBox.Text), this.ReviewTextBox.Text, this.currentlySelectedBookName);
 
                 MainWindow window = new MainWindow();
                 window.Show();
@@ -185,13 +175,7 @@ namespace Presentation
         {
             try
             {
-                UserDTO user = new UserDTO
-                {
-                    Email = "emma23@gmail.com",
-                    Id = 1,
-                    Password = "JWwiKVdNPns1"
-                };
-                service.DeleteStatistic(user, this.currentlySelectedBookName);
+                service.DeleteStatistic(UserHelper.User, this.currentlySelectedBookName);
 
                 MainWindow window = new MainWindow();
                 window.Show();

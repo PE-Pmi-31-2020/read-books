@@ -21,6 +21,7 @@ namespace BLL.Interfaces
         /// <param name="review">book review.</param>
         void CreateStatistic(BookDTO bookDTO, UserDTO userDTO, int readedPages, string review);
 
+        int GetUserId(UserDTO userDTO);
         void CreateUser(UserDTO userDTO);
 
         /// <summary>

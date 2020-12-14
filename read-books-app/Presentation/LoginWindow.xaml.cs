@@ -4,6 +4,10 @@
 
 namespace Presentation
 {
+    using BLL.DataTransferObjects;
+    using BLL.Interfaces;
+    using BLL.Services;
+    using Presentation.Classes;
     using System;
     using System.Collections.Generic;
     using System.Text;
@@ -24,6 +28,7 @@ namespace Presentation
         /// <summary>
         /// Initializes a new instance of the <see cref="LoginWindow"/> class.
         /// </summary>
+        private IStatisticService service = new StatisticService();
         public LoginWindow()
         {
             this.InitializeComponent();
@@ -36,6 +41,15 @@ namespace Presentation
         /// <param name="e">e.</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            UserDTO user = new UserDTO
+            {
+                Email = emailTextBox1.Text,
+                Password = passwordTextBox1.Password
+            };
+            UserHelper.User = new UserDTO();
+            UserHelper.User.Email = user.Email;
+            UserHelper.User.Password = user.Password;
+            UserHelper.User.Id = service.GetUserId(UserHelper.User);
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();

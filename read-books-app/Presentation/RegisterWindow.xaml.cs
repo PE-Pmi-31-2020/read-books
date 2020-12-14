@@ -9,6 +9,7 @@ using DAL;
 
 namespace Presentation
 {
+    using Presentation.Classes;
     using System;
     using System.Collections.Generic;
     using System.Text;
@@ -39,14 +40,18 @@ namespace Presentation
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
             UserDTO user = new UserDTO
             {
                 Email = emailTextBox.Text,
                 Password = passwordTextBox.Password
             };
             service.CreateUser(user);
+            UserHelper.User = new UserDTO();
+            UserHelper.User.Email = user.Email;
+            UserHelper.User.Password = user.Password;
+            UserHelper.User.Id = service.GetUserId(UserHelper.User);
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
             this.Close();
         }
 

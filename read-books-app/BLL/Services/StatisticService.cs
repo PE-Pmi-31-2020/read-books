@@ -182,7 +182,7 @@ namespace BLL.Services
             return bookId;
         }
 
-        private int GetUserId(UserDTO userDTO)
+        public int GetUserId(UserDTO userDTO)
         {
             int userId = this.DataBase.Users
                 .Find(u => u.Email == userDTO.Email

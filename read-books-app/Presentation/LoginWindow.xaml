@@ -46,7 +46,7 @@
 
             <StackPanel Grid.Row="1">
                 <StackPanel Orientation="Horizontal">
-                    <TextBox FontFamily="Century Gothic"
+                    <TextBox x:Name="emailTextBox1" FontFamily="Century Gothic"
                          FontWeight="ExtraLight"
                          Text="Email"
                          GotFocus="TextBox_GotFocus"
@@ -68,7 +68,7 @@
                     />
 
                 <StackPanel Orientation="Horizontal">
-                    <PasswordBox 
+                    <PasswordBox x:Name="passwordTextBox1"
                          FontFamily="Century Gothic"
                          FontWeight="ExtraLight"
                          Password="Password"

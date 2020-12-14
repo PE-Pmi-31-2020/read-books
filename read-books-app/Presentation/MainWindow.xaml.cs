@@ -16,6 +16,7 @@ namespace Presentation
     using BLL.Services;
     using LiveCharts;
     using LiveCharts.Wpf;
+    using Presentation.Classes;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml.
@@ -34,8 +35,8 @@ namespace Presentation
         {
             this.InitializeComponent();
             this.Loaded += this.MainWindow_Loaded;
-            List<BookDTO> book_list = this.service.GetBooksToRead(18).ToList();
-            List<BookDTO> read_book_list = this.service.GetReadedBooks(18).ToList();
+            List<BookDTO> book_list = this.service.GetBooksToRead(UserHelper.User.Id).ToList();
+            List<BookDTO> read_book_list = this.service.GetReadedBooks(UserHelper.User.Id).ToList();
             ChartValues<int> readedPages = new ChartValues<int> { 30, 20, 35, 10, 50, 43, 25};
             SCollection = new SeriesCollection
             {
@@ -115,8 +116,8 @@ namespace Presentation
 
         private void FindBookButton_Click(object sender, RoutedEventArgs e)
         {
-            List<BookDTO> book_list = this.service.GetBooksToRead(1).ToList();
-            List<BookDTO> read_book_list = this.service.GetReadedBooks(1).ToList();
+            List<BookDTO> book_list = this.service.GetBooksToRead(UserHelper.User.Id).ToList();
+            List<BookDTO> read_book_list = this.service.GetReadedBooks(UserHelper.User.Id).ToList();
 
             for (int i = 0; i < this.PlannedListBox.Items.Count; i++)
             {
